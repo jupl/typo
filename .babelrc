@@ -2,8 +2,7 @@
   "only": ["src"],
   "plugins": [
     "transform-inline-environment-variables",
-    "transform-runtime",
-    "react-hot-loader/babel"
+    "transform-runtime"
   ],
   "env": {
     "development": {

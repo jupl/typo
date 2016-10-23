@@ -2,7 +2,6 @@ const {HotModuleReplacementPlugin, NoErrorsPlugin} = require('webpack')
 
 // Modules requires for hot reloading in development
 const hotModules = [
-  'react-hot-loader/patch',
   'eventsource-polyfill',
   'webpack-hot-middleware/client',
 ]
