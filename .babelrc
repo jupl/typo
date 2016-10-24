@@ -11,9 +11,6 @@
     "production": {
       "presets": [["es2015", {"modules": false}]]
     },
-    "storybook": {
-      "presets": ["es2015"]
-    },
     "test": {
       "presets": ["es2015"]
     }
