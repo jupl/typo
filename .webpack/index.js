@@ -3,7 +3,6 @@ const addAssets = require('./assets')
 const addDevelopment = require('./development')
 const addProduction = require('./production')
 const addHot = require('./hot')
-const addStory = require('./story')
 
 /**
  * Build Webpack configuration
@@ -23,10 +22,6 @@ module.exports = ({
 
   // Add to configuration based on environment
   switch(process.env.NODE_ENV) {
-  case 'storybook':
-    addStory(config)
-    addDevelopment(config)
-    console.info('--- webpack: using storybook configuration')
   case 'development':
     addAssets(config, {assets})
     addDevelopment(config)
