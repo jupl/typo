@@ -51,7 +51,7 @@ module.exports = ({source, destination}) => {
  * @return {Object} Entries configuration for Webpack
  */
 function entries(source) {
-  const files = find(resolve(source, 'src/*.{js,ts,tsx}'))
+  const files = find(resolve(source, '*.{js,ts,tsx}'))
   return files.reduce((obj, file) => Object.assign(obj, {
     [basename(file, extname(file))]: [file],
   }), {})
