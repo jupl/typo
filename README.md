@@ -43,7 +43,7 @@ typo/
 ├─ coverage/   # Code coverage reports
 ├─ dist/       # Result build data from build tasks
 ├─ src/
-│  ├─ lib/                     # General purpose utilities
+│  ├─ common/                  # Shared code used throughout project
 │  │  └─ declarations.d.ts     # TypeScript declarations for project
 │  └─ app.tsx # Application entry point
 ├─ hot─server.js     # Source code for local development server
