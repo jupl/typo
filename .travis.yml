@@ -16,5 +16,3 @@ script:
   - yarn run coverage
   - yarn run build:dev
   - yarn run build:prod
-after:
-  - yarn test
