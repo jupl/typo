@@ -1,7 +1,7 @@
 # Typo <sub><sub><sub>TypeScript Boilerplate</sub></sub></sub>
 [![Travis](http://img.shields.io/travis/jupl/typo.svg?style=flat-square&label=travis)](https://travis-ci.org/jupl/typo)
-[![Dependencies](http://img.shields.io/david/jupl/typo.svg?style=flat-square)](https://david-dm.org/jupl/typo#info=devDependencies)
-[![Dev Dependencies](http://img.shields.io/david/dev/jupl/typo.svg?style=flat-square)](https://david-dm.org/jupl/typo#info=devDependencies)
+[![Dependencies](http://img.shields.io/david/jupl/typo.svg?style=flat-square)](https://david-dm.org/jupl/typo)
+[![Dev Dependencies](http://img.shields.io/david/dev/jupl/typo.svg?style=flat-square)](https://david-dm.org/jupl/typo?type=dev)
 
 ## Table of Contents
 - [About](#about)
