@@ -1,3 +1,3 @@
-import 'normalize.css'
+require('normalize.css')
 
 // Start writing!
