@@ -1,6 +1,5 @@
-const {process} = require('babel-jest')
 const makeCacheKeyFn = require('fbjs-scripts/jest/createCacheKeyFunction')
-const {extname, join} = require('path')
+const {join} = require('path')
 const {transpile} = require('typescript')
 const {compilerOptions} = require('./tsconfig')
 
@@ -8,15 +7,7 @@ const {compilerOptions} = require('./tsconfig')
 const options = Object.assign({}, compilerOptions, {module: 'commonjs'})
 
 // Transpile TypeScript files
-exports.process = (src, path) => {
-  switch(extname(path)) {
-  case '.ts':
-  case '.tsx':
-    return transpile(src, options, path)
-  default:
-    return src
-  }
-}
+exports.process = (src, path) => transpile(src, options, path)
 
 // Mark this file and tsconfig.json as potential cache busters
 exports.getCacheKey = makeCacheKeyFn([
