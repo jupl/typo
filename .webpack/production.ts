@@ -18,16 +18,16 @@ export default function addProduction({
     ...config,
     plugins: [
       ...plugins,
-    new LoaderOptionsPlugin({minimize: true, debug: false}),
-    new optimize.UglifyJsPlugin({
-      comments: false,
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        warnings: false,
-      },
-    }),
-    new DefinePlugin({'process.env.NODE_ENV': '"production"'}),
+      new LoaderOptionsPlugin({minimize: true, debug: false}),
+      new optimize.UglifyJsPlugin({
+        comments: false,
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+          warnings: false,
+        },
+      }),
+      new DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     ],
   }
 }

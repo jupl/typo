@@ -50,7 +50,7 @@ function addHotModules(entry: EntryProp): EntryProp {
   return Object.keys(entry)
     .filter(key => Array.isArray(entry[key]))
     .reduce((previous, key) => ({
-        ...previous,
+      ...previous,
       [key]: [...hotModules, ...entry[key]],
     }), {} as Entry)
 }
