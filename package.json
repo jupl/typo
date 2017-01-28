@@ -35,6 +35,7 @@
   "dependencies": {
     "@types/jest": "^16.0.1",
     "@types/node": "^7.0.0",
+    "@types/webpack-env": "^1.13.0",
     "awesome-typescript-loader": "^3.0.0-beta.17",
     "babel-plugin-transform-inline-environment-variables": "^6.8.0",
     "babel-plugin-transform-runtime": "^6.9.0",
