@@ -1,35 +1,38 @@
-const createConfig = require('./base')
-const addAssets = require('./assets')
-const addDevelopment = require('./development')
-const addProduction = require('./production')
-const addHot = require('./hot')
+import {Configuration} from 'webpack'
+import createBase from './base'
+import addAssets from './assets'
+import addDevelopment from './development'
+import addProduction from './production'
+import addHot from './hot'
 
-/**
- * @typedef {Object} IndexOptions
- * @property {string} assets Assets path to read static assets from
- * @property {string} source Source path to read source code from
- * @property {string} destination Destination path to write assets out
- */
+/** Options for webpack build */
+interface Options {
+  source: string
+  destination: string
+  assets: string
+}
 
 /**
  * Build Webpack configuration
  * @param {IndexOptions} options Options
  * @return {Object} Webpack configuration
  */
-module.exports = ({source, destination, assets}) => {
+export default function createConfig({
+  source,
+  destination,
+  assets,
+}: Options): Configuration {
   // Create base configuration and export
-  const config = createConfig({source, destination})
+  let config = createBase(source, destination)
 
   // Add to configuration based on environment
   switch(process.env.NODE_ENV) {
   case 'development':
-    addAssets(config, {assets})
-    addDevelopment(config)
+    config = addDevelopment(addAssets(config, assets))
     console.info('--- webpack: using development configuration')
     break
   case 'production':
-    addAssets(config, {assets})
-    addProduction(config)
+    config = addProduction(addAssets(config, assets))
     console.info('--- webpack: using production configuration')
     break
   default:
@@ -38,7 +41,7 @@ module.exports = ({source, destination, assets}) => {
 
   // Add hot reload support if explicitly specified
   if(process.env.HOT_MODULES === 'true') {
-    addHot(config)
+    config = addHot(config)
     console.info('--- webpack: using hot modules configuration')
   }
 
