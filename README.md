@@ -46,12 +46,12 @@ typo/
 │  ├─ common/                  # Shared code used throughout project
 │  │  └─ declarations.d.ts     # TypeScript declarations for project
 │  └─ app.tsx # Application entry point
-├─ hot─server.js     # Source code for local development server
+├─ hot─server.ts     # Source code for local development server
+├─ jest-ts.js        # Set up TypeScript for Jest
 ├─ package.json      # Configuration, tasks, and dependencies
-├─ preprocessor.js   # Set up TypeScript for Jest
 ├─ tsconfig.json     # TypeScript configuration
 ├─ tslint.json       # TypeScript linting rules
-├─ webpack.config.js # Webpack build configuration
+├─ webpack.config.ts # Webpack build configuration
 └─ yarn.lock         # Dependency pinning from Yarn
 ```
 
