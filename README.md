@@ -49,6 +49,7 @@ typo/
 ├─ hot─server.ts     # Source code for local development server
 ├─ jest-ts.js        # Set up TypeScript for Jest
 ├─ package.json      # Configuration, tasks, and dependencies
+├─ setup-tests.ts    # Source code to run before execution of tests
 ├─ tsconfig.json     # TypeScript configuration
 ├─ tslint.json       # TypeScript linting rules
 ├─ webpack.config.ts # Webpack build configuration
@@ -61,7 +62,7 @@ When JavaScript code is built, any files directly inside the `src/` directory ar
 ### Other Files
 
 #### `*.test.ts`, `*.test.tsx`
-Tests for components/domains/logic/etc. Some guides on tests include:
+Tests for components/domains/logic/etc. If code needs to be run before tests are executed see `setup-tests.ts` Some guides on tests include:
 - [Jest](https://facebook.github.io/jest/docs/api.html)
 
 #### `__snapshots__`
