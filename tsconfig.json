@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "jsx": "preserve",
+    "maxNodeModuleJsDepth": 1,
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
@@ -10,12 +12,7 @@
     "noUnusedParameters": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "es2015",
-    "types": [
-      "jest",
-      "node",
-      "webpack-env"
-    ]
+    "target": "es2015"
   },
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true

@@ -6,7 +6,7 @@ node_js:
 # The script actions are to check the project is valid.
 # If using Travis for the project PLEASE MODIFY/REMOVE AS NEEDED.
 script:
-  - yarn run lint
-  - yarn run coverage
-  - yarn run build:dev
-  - yarn run build:prod
+  - yarn lint
+  - yarn coverage
+  - yarn build:dev
+  - yarn build:prod
