@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "npm run build:prod",
-    "clean": "[ -d static ] && trash static || true",
+    "clean": "trash static",
     "coverage": "npm run test -- --coverage",
     "coverage:watch": "npm run coverage -- --watch",
     "lint": "tslint --type-check --project tsconfig.json",

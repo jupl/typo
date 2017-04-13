@@ -18,7 +18,7 @@ export default function createBase(
   let config: Configuration = {
     entry: entries(source),
     output: {
-      path: resolve('..', destination),
+      path: resolve(destination),
       filename: '[name].js',
       publicPath: '/',
     },
@@ -68,12 +68,11 @@ export default function createBase(
  * @return Entries configuration for Webpack
  */
 function entries(source: string) {
-  const basePath = resolve('..', source)
-  return find(resolve(basePath, '**/*.{j,t}s{,x}'))
+  return find(resolve(source, '**/*.{j,t}s{,x}'))
     .map(file => ({
       file,
       base: basename(file, extname(file)),
-      dir: dirname(relative(basePath, file)),
+      dir: dirname(relative(resolve(source), file)),
     }))
     .reduce((obj, {base, dir, file}) => ({
       ...obj,

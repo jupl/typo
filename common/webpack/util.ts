@@ -6,5 +6,5 @@ import {resolve as pathResolve} from 'path'
  * @return {string} Absolute path
  */
 export function resolve(...args: string[]) {
-  return pathResolve(__dirname, '..', ...args)
+  return pathResolve(__dirname, '../..', ...args)
 }

@@ -18,7 +18,7 @@ export default function addAssets(
   // If there is an assets folder, tell Webpack to copy contents as part of
   // build
   try {
-    const from = resolve('..', assets)
+    const from = resolve(assets)
     accessSync(from, F_OK)
     return {
       ...config,
