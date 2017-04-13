@@ -1,18 +1,16 @@
 import {Server} from 'hapi'
 import * as webpack from 'webpack'
-import config from './webpack.config'
+import config from '../webpack.config'
 import * as hapiWebpack from 'hapi-webpack-plugin'
 
-// Set up server port number with a default
 const RADIX = 10
 const DEFAULT_PORT = 3000
-const port = parseInt(process.env.PORT, RADIX) || DEFAULT_PORT
-
 initialize() // tslint:disable-line:no-floating-promises
 
 async function initialize() {
   // Create a new server instance
   const server = new Server()
+  const port = parseInt(process.env.PORT, RADIX) || DEFAULT_PORT
   server.connection({port})
 
   // Add webpack plugin so server knows to get static assets from builds

@@ -1,8 +1,7 @@
-import createConfig from './.webpack'
+import createConfig from './common/webpack'
 
-// See .webpack/index.ts for how configuration is built
+// See common/webpack/index.ts for how configuration is built
 export default createConfig({
-  source: 'src',
-  destination: 'dist',
-  assets: 'assets',
+  source: 'assets',
+  destination: 'static',
 })

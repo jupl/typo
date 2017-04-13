@@ -1,5 +1,5 @@
 import {find} from 'globule'
-import {basename, extname} from 'path'
+import {basename, dirname, extname, join, relative} from 'path'
 import {Configuration, Entry, optimize} from 'webpack'
 import {resolve} from './util'
 
@@ -18,7 +18,7 @@ export default function createBase(
   let config: Configuration = {
     entry: entries(source),
     output: {
-      path: resolve(destination),
+      path: resolve('..', destination),
       filename: '[name].js',
       publicPath: '/',
     },
@@ -68,8 +68,15 @@ export default function createBase(
  * @return Entries configuration for Webpack
  */
 function entries(source: string) {
-  const files = find(resolve(source, '*.{js,ts,tsx}'))
-  return files
-    .map(file => ({file, base: basename(file, extname(file))}))
-    .reduce((obj, {base, file}) => ({...obj, [base]: [file]}), {} as Entry)
+  const basePath = resolve('..', source)
+  return find(resolve(basePath, '**/*.{j,t}s{,x}'))
+    .map(file => ({
+      file,
+      base: basename(file, extname(file)),
+      dir: dirname(relative(basePath, file)),
+    }))
+    .reduce((obj, {base, dir, file}) => ({
+      ...obj,
+      [join(dir, base)]: [file],
+    }), {} as Entry)
 }

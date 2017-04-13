@@ -9,7 +9,6 @@ import addHot from './hot'
 interface Options {
   source: string
   destination: string
-  assets: string
 }
 
 /**
@@ -20,7 +19,6 @@ interface Options {
 export default function createConfig({
   source,
   destination,
-  assets,
 }: Options): Configuration {
   // Create base configuration and export
   const hotModulesEnabled = process.env.HOT_MODULES === 'true'
@@ -29,11 +27,11 @@ export default function createConfig({
   // Add to configuration based on environment
   switch(process.env.NODE_ENV) {
   case 'development':
-    config = addDevelopment(addAssets(config, assets))
+    config = addDevelopment(addAssets(config, source, '**/*.{j,t}s{,x}'))
     console.info('--- webpack: using development configuration')
     break
   case 'production':
-    config = addProduction(addAssets(config, assets))
+    config = addProduction(addAssets(config, source, '**/*.{j,t}s{,x}'))
     console.info('--- webpack: using production configuration')
     break
   default:

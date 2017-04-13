@@ -13,15 +13,16 @@ import {resolve} from './util'
 export default function addAssets(
   {plugins = [], ...config}: Configuration,
   assets: string,
+  ...ignore: string[],
 ): Configuration {
   // If there is an assets folder, tell Webpack to copy contents as part of
   // build
   try {
-    const from = resolve(assets)
+    const from = resolve('..', assets)
     accessSync(from, F_OK)
     return {
       ...config,
-      plugins: [...plugins, new CopyPlugin([{from}])],
+      plugins: [...plugins, new CopyPlugin([{from, ignore}])],
     }
   }
   catch(e) {
