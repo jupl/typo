@@ -1,7 +1,7 @@
 import {App, Plugins, bootstrap} from 'hapiour-decorators'
+import WebpackPlugin from './plugins/webpack'
 import {port} from '../common/config'
 import Server from '../common/server'
-import WebpackPlugin from './plugins/webpack'
 
 @App({port})
 @Plugins([WebpackPlugin])
