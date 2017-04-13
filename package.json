@@ -29,7 +29,7 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "server": "npm run server:hot",
-    "server:hot": "cross-env NODE_ENV=development HOT_MODULES=true ts-node common/hot-server",
+    "server:hot": "cross-env NODE_ENV=development HOT_MODULES=true ts-node webpack/index",
     "build": "npm run clean && cross-env HOT_MODULES=false webpack",
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build"
@@ -64,6 +64,7 @@
     "eventsource-polyfill": "^0.9.6",
     "hapi": "^16.0.1",
     "hapi-webpack-plugin": "^2.0.0",
+    "hapiour-decorators": "^1.2.0",
     "jest": "^19.0.2",
     "ts-jest": "^19.0.8",
     "tslint": "^4.1.0"

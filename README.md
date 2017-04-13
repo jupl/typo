@@ -42,11 +42,12 @@ typo/
 │  └─ index.ts          # An application entry point
 ├─ coverage/            # Code coverage reports
 ├─ common/              # Shared code used throughout project
-│  ├─ webpack/          # Webpack build configuration builder
 │  ├─ declarations.d.ts # TypeScript declarations for project
-│  ├─ hot─server.ts     # Source code for local development server
 │  └─ setup-tests.ts    # Source code to run before execution of tests
 ├─ static/              # Result assets build from build tasks
+├─ webpack/             # Webpack related code
+│  ├─ config/           # Webpack build configuration builder
+│  └─ index.ts          # Local development server
 ├─ package.json         # Configuration, tasks, and dependencies
 ├─ tsconfig.json        # TypeScript configuration
 ├─ tslint.json          # TypeScript linting rules

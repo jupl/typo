@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "experimentalDecorators": true,
     "jsx": "preserve",
     "maxNodeModuleJsDepth": 1,
     "moduleResolution": "node",
