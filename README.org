@@ -40,6 +40,7 @@ typo/
 ├─ app/         # Application domain
 │  ├─ routes.ts # Application routes
 │  └─ server.ts # Application server entry point
+├─ coverage/            # Code coverage reports
 ├─ common/              # Shared domain
 │  ├─ plugins/          # Shared plugins
 │  ├─ declarations.d.ts # TypeScript declarations
@@ -50,6 +51,12 @@ typo/
 ├─ tslint.json       # TypeScript linting rules
 └─ yarn.lock         # Dependency pinning from Yarn
 #+END_EXAMPLE
+*** Other Files
+**** =*.test.ts=, =*.test.tsx=
+Tests for components/domains/logic/etc. If code needs to be run before tests are executed see =setup-tests.ts= Some guides on tests include:
+- [[https://facebook.github.io/jest/docs/api.html][Jest]]
+**** =__snapshots__=
+Generated files/directories when using Jest's [[https://facebook.github.io/jest/docs/tutorial-react.html#snapshot-testing][snapshot feature]]. These files should be left to Jest and not touched manually.
 
 ^{[[#typo-typescript-boilerplate][Back to top]]}
 
