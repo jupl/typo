@@ -7,7 +7,7 @@ const RADIX = 10
 const DEFAULT_PORT = 3000
 const port = parseInt(process.env.PORT, RADIX) || DEFAULT_PORT
 
-@App({port})
+@App({port, routes: {security: process.env.NODE_ENV !== 'development'}})
 @Plugins([AsyncHandlerPlugin])
 @Inject([Routes])
 export default class AppServer extends Server {}
