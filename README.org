@@ -89,7 +89,7 @@ Cleans up JS code that was generated from building with =package=.
 
 ** Project Resources
 - Language
-  - [[http://www.typescriptlang.org/][TypeScript]]
+  - [[https://www.typescriptlang.org/][TypeScript]]
   - [[https://palantir.github.io/tslint/][TSLint]]
   - [[https://github.com/TypeStrong/ts-node][TypeScript Node]]
 - Libraries
@@ -100,6 +100,6 @@ Cleans up JS code that was generated from building with =package=.
 - Development Tools
   - [[https://github.com/fgnass/node-dev][node-dev]]
 - Testing
-  - [[http://facebook.github.io/jest/][Jest]]
+  - [[https://facebook.github.io/jest/][Jest]]
 
 ^{[[#typo-typescript-boilerplate][Back to top]]}
