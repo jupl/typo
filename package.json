@@ -40,13 +40,18 @@
   },
   "bundledDependencies": [
     "dotenv",
-    "ejs",
     "hapi",
     "hapi-es7-async-handler",
     "hapiour-decorators",
-    "inert",
-    "vision"
+    "inert"
   ],
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "hapi": "^16.1.1",
+    "hapi-es7-async-handler": "^1.0.6",
+    "hapiour-decorators": "^1.2.0",
+    "inert": "^4.2.0"
+  },
   "devDependencies": {
     "@types/copy-webpack-plugin": "^4.0.0",
     "@types/globule": "^1.1.3",
@@ -62,15 +67,10 @@
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
-    "dotenv": "^4.0.0",
     "eslint-config-jupl": "^0.5.3",
     "file-loader": "^0.11.1",
     "globule": "^1.1.0",
-    "hapi": "^16.1.1",
-    "hapi-es7-async-handler": "^1.0.6",
     "hapi-webpack-plugin": "^2.0.0",
-    "hapiour-decorators": "^1.2.0",
-    "inert": "^4.2.0",
     "jest": "^19.0.2",
     "node-dev": "^3.1.3",
     "style-loader": "^0.16.1",

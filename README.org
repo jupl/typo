@@ -1,5 +1,6 @@
 #+HTML: <h1>Typo <sub><sub><sub>TypeScript Boilerplate</sub></sub></sub></h1>
 [[https://travis-ci.org/jupl/typo][file:https://img.shields.io/travis/jupl/typo/combo.svg?label=travis&style=flat-square]]
+[[https://david-dm.org/jupl/typo/combo][file:https://img.shields.io/david/jupl/typo/combo.svg?style=flat-square]]
 [[https://david-dm.org/jupl/typo/combo?type=dev][file:https://img.shields.io/david/dev/jupl/typo/combo.svg?style=flat-square]]
 
 ** Table of Contents
