@@ -73,7 +73,7 @@ yarn run lint
 *** =package=
 Package application using [[https://docs.npmjs.com/cli/pack][npm pack]] so that it can be installed and run standalone. Take advantage of [[https://github.com/motdotla/dotenv][dotenv]] and use =.env= for configuration.
 **** Note
-Make sure that [[https://docs.npmjs.com/files/package.json#bundleddependencies][=bundledDependencies]] in =package.json= and [[https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package][=.npmignore=]] is up to date when using this task.
+Make sure that [[https://docs.npmjs.com/files/package.json#bundleddependencies][bundledDependencies]] in =package.json= and [[https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package][.npmignore]] is up to date when using this task.
 *** =server=
 Alias for =server:dev=.
 *** =server:dev= / =server:prod=
