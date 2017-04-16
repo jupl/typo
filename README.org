@@ -95,12 +95,12 @@ Check codebase against linting rules. Optionally, some errors can be fixed autom
 
 ** Project Resources
 - Language
-  - [[http://www.typescriptlang.org/][TypeScript]]
+  - [[https://www.typescriptlang.org/][TypeScript]]
   - [[https://palantir.github.io/tslint/][TSLint]]
 - Libraries
   - [[https://necolas.github.io/normalize.css/][normalize.css]]
 - Testing
-  - [[http://facebook.github.io/jest/][Jest]]
+  - [[https://facebook.github.io/jest/][Jest]]
 - Build Tools
   - [[https://webpack.js.org/][Webpack]]
 
