@@ -100,7 +100,7 @@ Cleans up JS code that was generated from building with =package=, =build:dev=, 
 
 ** Project Resources
 - Language
-  - [[http://www.typescriptlang.org/][TypeScript]]
+  - [[https://www.typescriptlang.org/][TypeScript]]
   - [[https://palantir.github.io/tslint/][TSLint]]
 - Libraries
   - [[https://github.com/motdotla/dotenv][dotenv]]
@@ -111,7 +111,7 @@ Cleans up JS code that was generated from building with =package=, =build:dev=, 
 - Development Tools
   - [[https://github.com/fgnass/node-dev][node-dev]]
 - Testing
-  - [[http://facebook.github.io/jest/][Jest]]
+  - [[https://facebook.github.io/jest/][Jest]]
 - Build Tools
   - [[https://webpack.js.org/][Webpack]]
 
