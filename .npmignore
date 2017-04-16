@@ -1,11 +1,7 @@
+/.vscode/
 *.ts
-.editorconfig
-.env
-.vscode
-.travis.yml
-tsconfig.json
-tslint.json
-yarn.lock
+/*
+!/*/
 
 # Created by https://www.gitignore.io/api/node
 
