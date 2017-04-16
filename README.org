@@ -1,7 +1,7 @@
 #+HTML: <h1>Typo <sub><sub><sub>TypeScript Boilerplate</sub></sub></sub></h1>
 [[https://travis-ci.org/jupl/typo][file:https://img.shields.io/travis/jupl/typo/client.svg?label=travis&style=flat-square]]
-[[https://david-dm.org/jupl/typo/server][file:https://img.shields.io/david/jupl/typo/client.svg?style=flat-square]]
-[[https://david-dm.org/jupl/typo/server?type=dev][file:https://img.shields.io/david/dev/jupl/typo/client.svg?style=flat-square]]
+[[https://david-dm.org/jupl/typo/client][file:https://img.shields.io/david/jupl/typo/client.svg?style=flat-square]]
+[[https://david-dm.org/jupl/typo/client?type=dev][file:https://img.shields.io/david/dev/jupl/typo/client.svg?style=flat-square]]
 
 ** Table of Contents
 - [[#about][About]]
