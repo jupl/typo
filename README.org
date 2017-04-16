@@ -1,6 +1,5 @@
 #+HTML: <h1>Typo <sub><sub><sub>TypeScript Boilerplate</sub></sub></sub></h1>
 [[https://travis-ci.org/jupl/typo][file:https://img.shields.io/travis/jupl/typo/server.svg?label=travis&style=flat-square]]
-[[https://david-dm.org/jupl/typo/server][file:https://img.shields.io/david/jupl/typo/server.svg?style=flat-square]]
 [[https://david-dm.org/jupl/typo/server?type=dev][file:https://img.shields.io/david/dev/jupl/typo/server.svg?style=flat-square]]
 
 ** Table of Contents
@@ -12,7 +11,7 @@
 - [[#project-resources][Project Resources]]
 
 ** About
-This is a boilerplate project for developing web server(s) using [[https://www.typescriptlang.org/][TypeScript]] and [[https://hapijs.com/][Hapi]].
+This is a boilerplate project for developing and packaging web server(s) using [[https://www.typescriptlang.org/][TypeScript]] and [[https://hapijs.com/][Hapi]].
 
 ^{[[#typo-typescript-boilerplate][Back to top]]}
 
@@ -71,8 +70,8 @@ Examples:
 npm run server
 yarn run lint
 #+END_EXAMPLE
-*** =start=
-Alias for =server:prod=.
+*** =package=
+Package application using [[https://docs.npmjs.com/cli/pack][npm pack]] so that it can be installed and run standalone. Take advantage of [[https://github.com/motdotla/dotenv][dotenv]] and use =.env= for configuration.
 *** =server=
 Alias for =server:dev=.
 *** =server:dev= / =server:prod=
@@ -81,6 +80,8 @@ Start server in a development or production environment. To override the port ch
 Execute tests once or continuously on file changes. In addition, code coverage can be determined.
 *** =lint= / =lint:fix=
 Check codebase against linting rules. Optionally, some errors can be fixed automatically.
+*** =clean=
+Cleans up JS code that was generated from building with =package=.
 
 ^{[[#typo-typescript-boilerplate][Back to top]]}
 
@@ -90,6 +91,7 @@ Check codebase against linting rules. Optionally, some errors can be fixed autom
   - [[https://palantir.github.io/tslint/][TSLint]]
   - [[https://github.com/TypeStrong/ts-node][TypeScript Node]]
 - Libraries
+  - [[https://github.com/motdotla/dotenv][dotenv]]
   - [[https://hapijs.com/][Hapi]]
   - [[https://github.com/Boulangerie/hapiour-decorators][Hapiour Decorators]]
   - [[https://github.com/eseom/hapi-es7-async-handler][Hapi ES7 Async Handler]]

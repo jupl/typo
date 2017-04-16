@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+import 'dotenv/config'
 import {App, Inject, Plugins, bootstrap} from 'hapiour-decorators'
 import Routes from './routes'
 import Server from '../common/server'
