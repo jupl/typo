@@ -1,0 +1,18 @@
+#+HTML: <h1>Typo <sub><sub><sub>TypeScript Boilerplate</sub></sub></sub></h1>
+
+** About
+This is a collection of boilerplate projects for developing applications using [[https://www.typescriptlang.org/][TypeScript]].
+
+** Branches
+- [[https://github.com/jupl/typo/tree/server][Server with Hapi]]
+[[https://travis-ci.org/jupl/typo][file:https://img.shields.io/travis/jupl/typo/server.svg?label=travis&style=flat-square]]
+[[https://david-dm.org/jupl/typo/server][file:https://img.shields.io/david/jupl/typo/server.svg?style=flat-square]]
+[[https://david-dm.org/jupl/typo/server?type=dev][file:https://img.shields.io/david/dev/jupl/typo/server.svg?style=flat-square]]
+- [[https://github.com/jupl/typo/tree/client][Client with Webpack]]
+[[https://travis-ci.org/jupl/typo][file:https://img.shields.io/travis/jupl/typo/client.svg?label=travis&style=flat-square]]
+[[https://david-dm.org/jupl/typo/client][file:https://img.shields.io/david/jupl/typo/client.svg?style=flat-square]]
+[[https://david-dm.org/jupl/typo/client?type=dev][file:https://img.shields.io/david/dev/jupl/typo/client.svg?style=flat-square]]
+- [[https://github.com/jupl/typo/tree/combo][Server/Client Combination]]
+[[https://travis-ci.org/jupl/typo][file:https://img.shields.io/travis/jupl/typo/combo.svg?label=travis&style=flat-square]]
+[[https://david-dm.org/jupl/typo/combo][file:https://img.shields.io/david/jupl/typo/combo.svg?style=flat-square]]
+[[https://david-dm.org/jupl/typo/combo?type=dev][file:https://img.shields.io/david/dev/jupl/typo/combo.svg?style=flat-square]]
