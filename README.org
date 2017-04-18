@@ -83,7 +83,7 @@ Alias for =build:prod=.
 Alias for =server:hot=.
 *** =server:hot=
 Start a local development server with hot reloading. To override the port change the environment variable =PORT=. The following is provided:
-- [[https://webpack.github.io/docs/hot-module-replacement.html][Hot reloading]]
+- [[https://webpack.js.org/concepts/hot-module-replacement][Hot reloading]]
 *** =build:dev= / =build:prod=
 Build application and include assets into a packaged build in the =static/= directory. The build for =build:dev= is not minifed and includes source maps, making it ideal for development. The build for =build:prod= is minified (with dead code elimination) and does not include source maps, making it ideal for production.
 *** =test= / =test:watch= / =coverage= / =coverage:watch=
