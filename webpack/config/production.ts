@@ -6,7 +6,7 @@ import * as BabiliPlugin from 'babili-webpack-plugin'
  * @param config Configuration to modify
  * @return Updated configuration
  */
-export default function addProduction({
+export function addProduction({
   plugins = [],
   ...config,
 }: Configuration): Configuration {

@@ -18,7 +18,7 @@ const hotModules = [
  * @param config Configuration to modify
  * @return Updated configuration
  */
-export default function addHot({
+export function addHot({
   entry,
   plugins = [],
   ...config,

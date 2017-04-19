@@ -3,6 +3,13 @@ import {basename, dirname, extname, join, relative} from 'path'
 import {Configuration, Entry, optimize} from 'webpack'
 import {resolve} from './util'
 
+/** Options for base build */
+interface Options {
+  source: string
+  destination: string
+  useCache: boolean
+}
+
 /**
  * Build base Webpack configuration with defaults that can be expanded upon
  * @property source Source path to read source code from
@@ -10,11 +17,7 @@ import {resolve} from './util'
  * @property useCache If true then use cache for TypeScript loader
  * @return Webpack configuration
  */
-export default function createBase(
-  source: string,
-  destination: string,
-  useCache: boolean,
-): Configuration {
+export function createBase({source, destination, useCache}: Options) {
   let config: Configuration = {
     entry: entries(source),
     output: {

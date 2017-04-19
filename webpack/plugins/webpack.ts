@@ -8,7 +8,7 @@ import config from '../../webpack.config'
 import * as hapiWebpack from 'hapi-webpack-plugin'
 
 @PluginConfigurator(hapiWebpack)
-export default class WebpackConfigurator implements IPluginConfigurator {
+export class WebpackPlugin implements IPluginConfigurator {
   public options: IPluginOptions
 
   public constructor() {
