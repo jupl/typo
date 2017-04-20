@@ -1,4 +1,4 @@
-import {Configuration, LoaderOptionsPlugin} from 'webpack'
+import {Configuration, DefinePlugin, LoaderOptionsPlugin} from 'webpack'
 import * as BabiliPlugin from 'babili-webpack-plugin'
 
 /**
@@ -16,6 +16,7 @@ export function addProduction({
       ...plugins,
       new LoaderOptionsPlugin({minimize: true, debug: false}),
       new BabiliPlugin(),
+      new DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     ],
   }
 }
