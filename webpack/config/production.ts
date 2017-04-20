@@ -1,9 +1,5 @@
-import {
-  Configuration,
-  DefinePlugin,
-  LoaderOptionsPlugin,
-  optimize,
-} from 'webpack'
+import * as BabiliPlugin from 'babili-webpack-plugin'
+import {Configuration, DefinePlugin, LoaderOptionsPlugin} from 'webpack'
 
 /**
  * Add production build settings to Webpack configuration
@@ -19,14 +15,7 @@ export default function addProduction({
     plugins: [
       ...plugins,
       new LoaderOptionsPlugin({minimize: true, debug: false}),
-      new optimize.UglifyJsPlugin({
-        comments: false,
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-          warnings: false,
-        },
-      }),
+      new BabiliPlugin(),
       new DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     ],
   }
