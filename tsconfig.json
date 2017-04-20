@@ -18,6 +18,10 @@
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true
   },
+  "exclude": [
+    "node_modules",
+    "static"
+  ],
   "files": [
     "app/server.ts"
   ]
