@@ -6,7 +6,7 @@ import {Configuration} from 'webpack'
  * @param config Configuration to modify
  * @return Updated configuration
  */
-export default function addDevelopment(config: Configuration): Configuration {
+export function addDevelopment(config: Configuration): Configuration {
   return {
     ...config,
     devtool: 'inline-source-map',

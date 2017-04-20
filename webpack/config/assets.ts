@@ -4,16 +4,21 @@ import {accessSync} from 'fs'
 import {Configuration} from 'webpack'
 import {resolve} from './util'
 
+/** Options for asset integration */
+interface Options {
+  assets: string
+  ignore: string[]
+}
+
 /**
  * Add static assets to Webpack configuration
  * @param config Configuration to modify
- * @param assets Assets path to read static assets from
+ * @param options Asset options
  * @return Updated configuration
  */
-export default function addAssets(
+export function addAssets(
   {plugins = [], ...config}: Configuration,
-  assets: string,
-  ...ignore: string[],
+  {assets, ignore}: Options,
 ): Configuration {
   // If there is an assets folder, tell Webpack to copy contents as part of
   // build

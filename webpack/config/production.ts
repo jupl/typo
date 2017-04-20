@@ -1,4 +1,3 @@
-import * as BabiliPlugin from 'babili-webpack-plugin'
 import {Configuration, DefinePlugin, LoaderOptionsPlugin} from 'webpack'
 
 /**
@@ -6,7 +5,7 @@ import {Configuration, DefinePlugin, LoaderOptionsPlugin} from 'webpack'
  * @param config Configuration to modify
  * @return Updated configuration
  */
-export default function addProduction({
+export function addProduction({
   plugins = [],
   ...config,
 }: Configuration): Configuration {
@@ -15,7 +14,7 @@ export default function addProduction({
     plugins: [
       ...plugins,
       new LoaderOptionsPlugin({minimize: true, debug: false}),
-      new BabiliPlugin(),
+      new (require('babili-webpack-plugin'))(),
       new DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     ],
   }

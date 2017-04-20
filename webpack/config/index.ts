@@ -1,9 +1,8 @@
-import {Configuration} from 'webpack'
-import createBase from './base'
-import addAssets from './assets'
-import addDevelopment from './development'
-import addProduction from './production'
-import addHot from './hot'
+import {createBase} from './base'
+import {addAssets} from './assets'
+import {addDevelopment} from './development'
+import {addProduction} from './production'
+import {addHot} from './hot'
 
 /** Options for webpack build */
 interface Options {
@@ -16,22 +15,25 @@ interface Options {
  * @param {IndexOptions} options Options
  * @return {Object} Webpack configuration
  */
-export default function createConfig({
-  source,
-  destination,
-}: Options): Configuration {
+export function createConfig({source, destination}: Options) {
   // Create base configuration and export
   const hotModulesEnabled = process.env.HOT_MODULES === 'true'
-  let config = createBase(source, destination, hotModulesEnabled)
+  let config = createBase({source, destination, useCache: hotModulesEnabled})
+
+  // Include assets
+  config = addAssets(config, {
+    assets: source,
+    ignore: ['**/*.{j,t}s{,x}'],
+  })
 
   // Add to configuration based on environment
   switch(process.env.NODE_ENV) {
   case 'development':
-    config = addDevelopment(addAssets(config, source, '**/*.{j,t}s{,x}'))
+    config = addDevelopment(config)
     console.info('--- webpack: using development configuration')
     break
   case 'production':
-    config = addProduction(addAssets(config, source, '**/*.{j,t}s{,x}'))
+    config = addProduction(config)
     console.info('--- webpack: using production configuration')
     break
   default:
