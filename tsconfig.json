@@ -23,6 +23,7 @@
     "static"
   ],
   "files": [
-    "app/server.ts"
+    "app/server.ts",
+    "common/declarations.d.ts"
   ]
 }
