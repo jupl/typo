@@ -1,7 +1,7 @@
 import {Server as HapiServer} from 'hapi'
 import {IApp} from 'hapiour-decorators'
 
-export default class Server implements IApp {
+export class Server implements IApp {
   protected server: HapiServer
 
   constructor(server: HapiServer) {
