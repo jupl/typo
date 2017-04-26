@@ -22,7 +22,7 @@
     }
   },
   "scripts": {
-    "package": "npm run clean && tsc && npm pack && npm run clean",
+    "package": "npm run clean && npm run build:server && npm pack && npm run clean",
     "clean": "trash '**/*.js' '!node_modules/**'",
     "coverage": "npm run test -- --coverage",
     "coverage:watch": "npm run coverage -- --watch",
@@ -30,6 +30,7 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
+    "build:server": "tsc --project tsconfig.build.json",
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development node-dev -r ts-node/register app/server.ts",
     "server:prod": "ts-node --fast app/server"

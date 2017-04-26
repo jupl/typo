@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig",
+  "include": [
+    "**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "app/server.ts"
+  ]
+}
