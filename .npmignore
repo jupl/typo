@@ -1,8 +1,8 @@
-/.vscode/
-/build/
-*.ts
 /*
 !/*/
+*.ts
+/.vscode/
+/build/
 
 # Created by https://www.gitignore.io/api/node
 
