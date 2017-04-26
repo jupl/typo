@@ -35,12 +35,6 @@
     "server:dev": "cross-env NODE_ENV=development node-dev -r ts-node/register app/server.ts",
     "server:prod": "ts-node --fast app/server"
   },
-  "bundledDependencies": [
-    "dotenv",
-    "hapi",
-    "hapi-es7-async-handler",
-    "hapiour-decorators"
-  ],
   "dependencies": {
     "dotenv": "^4.0.0",
     "hapi": "^16.1.1",
