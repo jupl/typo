@@ -65,8 +65,8 @@ Tests for components/domains/logic/etc. If code needs to be run before tests are
 - [[https://facebook.github.io/jest/docs/api.html][Jest]]
 **** =__snapshots__=
 Generated files/directories when using Jest's [[https://facebook.github.io/jest/docs/tutorial-react.html#snapshot-testing][snapshot feature]]. These files should be left to Jest and not touched manually.
-*** =process.env.IS_CLIENT=
-When writing code that is shared between server and client, there are times when code needs to be run in one environment but not the other. =process.env.IS_CLIENT= is set to ="true"= when in the client environment. For example:
+*** ~process.env.IS_CLIENT~
+When writing code that is shared between server and client, there are times when code needs to be run in one environment but not the other. ~process.env.IS_CLIENT === "true"~ when in the client environment. For example:
 #+BEGIN_SRC typescript
 if(process.env.IS_CLIENT === "true") {
   // Client side only code
