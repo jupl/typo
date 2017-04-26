@@ -39,13 +39,6 @@
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build"
   },
-  "bundledDependencies": [
-    "dotenv",
-    "hapi",
-    "hapi-es7-async-handler",
-    "hapiour-decorators",
-    "inert"
-  ],
   "dependencies": {
     "dotenv": "^4.0.0",
     "hapi": "^16.1.1",
