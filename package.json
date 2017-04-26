@@ -23,7 +23,7 @@
   },
   "scripts": {
     "package": "npm run build:prod && npm run build:server && npm pack && npm run clean",
-    "clean": "trash '**/*.js' static '!assets/**' '!node_modules/**'",
+    "clean": "trash '**/*.js' build static '!assets/**' '!node_modules/**'",
     "coverage": "npm run test -- --coverage",
     "coverage:watch": "npm run coverage -- --watch",
     "lint": "tslint --type-check --project tsconfig.json",
@@ -35,7 +35,7 @@
     "server:hot": "cross-env HOT_MODULES=true npm run server:dev",
     "server:prod": "cross-env NODE_ENV=production ts-node --fast app/server",
     "build": "npm run clean && webpack",
-    "build:server": "tsc --project tsconfig.build.json",
+    "build:server": "tsc --project tsconfig.build.json && cross-env NODE_ENV=production babili build -d . --plugins transform-node-env-inline",
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build"
   },
@@ -65,8 +65,10 @@
     "@types/webpack": "^2.2.14",
     "@types/webpack-env": "^1.13.0",
     "awesome-typescript-loader": "^3.1.2",
+    "babel-plugin-transform-node-env-inline": "^0.0.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.4.0",
+    "babili": "^0.0.12",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",

@@ -1,9 +1,10 @@
-/.awcache/
-/assets/
-/.vscode/
-*.ts
 /*
 !/*/
+/.awcache/
+/assets/
+/build/
+/.vscode/
+*.ts
 
 # Created by https://www.gitignore.io/api/node
 
