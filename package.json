@@ -22,7 +22,7 @@
     }
   },
   "scripts": {
-    "package": "npm run build:prod && tsc && npm pack && npm run clean",
+    "package": "npm run build:prod && npm run build:server && npm pack && npm run clean",
     "clean": "trash '**/*.js' static '!assets/**' '!node_modules/**'",
     "coverage": "npm run test -- --coverage",
     "coverage:watch": "npm run coverage -- --watch",
@@ -35,6 +35,7 @@
     "server:hot": "cross-env HOT_MODULES=true npm run server:dev",
     "server:prod": "cross-env NODE_ENV=production ts-node --fast app/server",
     "build": "npm run clean && webpack",
+    "build:server": "tsc --project tsconfig.build.json",
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build"
   },
