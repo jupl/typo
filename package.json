@@ -1,0 +1,72 @@
+{
+  "name": "app",
+  "description": "Application description",
+  "author": "John Doe <john.doe@gmail.com>",
+  "version": "0.0.1",
+  "main": "./static/main.js",
+  "private": true,
+  "build": {
+    "files": [
+      "node_modules/",
+      "static/",
+      "package.json"
+    ]
+  },
+  "jest": {
+    "mapCoverage": true,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/common/setup-tests.ts",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
+    "transform": {
+      ".tsx?": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    }
+  },
+  "scripts": {
+    "package": "npm run build:prod && build && npm run clean",
+    "clean": "trash static",
+    "coverage": "npm run test -- --coverage",
+    "coverage:watch": "npm run coverage -- --watch",
+    "lint": "tslint --type-check --project tsconfig.json",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "server": "npm run server:hot",
+    "server:base": "cross-env PORT=3000 electron -r ts-node/register assets/main.ts",
+    "server:dev": "cross-env NODE_ENV=development npm run server:base",
+    "server:hot": "cross-env HOT_MODULES=true npm run server:dev",
+    "server:prod": "cross-env NODE_ENV=production npm run server:base",
+    "build": "npm run clean && cross-env webpack",
+    "build:dev": "cross-env NODE_ENV=development npm run build",
+    "build:prod": "cross-env NODE_ENV=production npm run build"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.4.37",
+    "@types/hapi": "^16.0.6",
+    "@types/jest": "^19.2.2",
+    "@types/node": "^7.0.0",
+    "@types/webpack": "^2.2.15",
+    "cross-env": "^4.0.0",
+    "css-loader": "^0.28.1",
+    "electron": "^1.6.6",
+    "electron-builder": "^17.3.1",
+    "eslint-config-jupl": "^0.6.2",
+    "hapi": "^16.1.1",
+    "hapi-webpack-plugin": "^2.0.0",
+    "hapiour-decorators": "^1.2.0",
+    "jest": "^20.0.0",
+    "normalize.css": "^7.0.0",
+    "style-loader": "^0.17.0",
+    "trash-cli": "^1.4.0",
+    "ts-jest": "^20.0.0",
+    "ts-node": "^3.0.2",
+    "tslint": "^5.2.0",
+    "typescript": "^2.1.4",
+    "wcb": "^0.3.2",
+    "webpack": "^2.5.1"
+  }
+}
