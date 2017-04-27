@@ -71,7 +71,7 @@ export function createBase({source, destination, useCache}: Options) {
  * @return Entries configuration for Webpack
  */
 function entries(source: string) {
-  return find(resolve(source, '**/*.{j,t}s{,x}'))
+  return find(resolve(source, '**/*.ts{,x}'))
     .map(file => ({
       file,
       base: basename(file, extname(file)),
