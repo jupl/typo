@@ -1,5 +1,8 @@
 import {InertPlugin} from './inert'
 
-export const AssetsPlugin = process.env.NODE_ENV !== 'development'
-  ? InertPlugin
-  : require('../../webpack/plugins/webpack').WebpackPlugin
+export let AssetsPlugin = InertPlugin
+
+if(process.env.NODE_ENV === 'development') {
+  const {WebpackPlugin} = require('../../webpack/plugins/webpack')
+  AssetsPlugin = WebpackPlugin
+}
