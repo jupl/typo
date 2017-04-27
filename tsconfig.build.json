@@ -4,12 +4,10 @@
     "outDir": "build"
   },
   "include": [
-    "**/*.d.ts"
+    "**/*.d.ts",
+    "*/server.ts"
   ],
   "exclude": [
     "node_modules"
-  ],
-  "files": [
-    "app/server.ts"
   ]
 }
