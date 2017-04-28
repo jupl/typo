@@ -17,5 +17,10 @@
   },
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "static"
+  ]
 }
