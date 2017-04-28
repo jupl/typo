@@ -12,15 +12,19 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "outDir": "build",
     "strictNullChecks": true,
     "target": "es2015"
   },
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true
   },
+  "include": [
+    "**/*.d.ts",
+    "*/bin.ts"
+  ],
   "exclude": [
     "node_modules",
-    "build",
-    "static"
+    "**/*.js"
   ]
 }
