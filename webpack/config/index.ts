@@ -24,7 +24,7 @@ export function createConfig({source, destination}: Options): Configuration {
   // Include assets
   config = addAssets(config, {
     assets: source,
-    ignore: ['**/*.{j,t}s{,x}'],
+    ignore: ['**/*.ts{,x}'],
   })
 
   // Add to configuration based on environment
