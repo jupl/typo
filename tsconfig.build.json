@@ -6,8 +6,5 @@
   "include": [
     "**/*.d.ts",
     "*/bin.ts"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }
