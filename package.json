@@ -35,7 +35,7 @@
     "server:hot": "cross-env HOT_MODULES=true npm run server:dev",
     "server:prod": "cross-env NODE_ENV=production ts-node --fast app/server",
     "build": "npm run clean && webpack",
-    "build:server": "tsc && cross-env NODE_ENV=production babili build -d . --plugins transform-node-env-inline",
+    "build:server": "tsc --project tsconfig.build.json && cross-env NODE_ENV=production babili build -d . --plugins transform-node-env-inline",
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build"
   },
