@@ -30,7 +30,7 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "build:server": "tsc && cross-env NODE_ENV=production babili build -d . --plugins transform-node-env-inline",
+    "build:server": "tsc --project tsconfig.build.json && cross-env NODE_ENV=production babili build -d . --plugins transform-node-env-inline",
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development node-dev -r ts-node/register app/server.ts",
     "server:prod": "ts-node --fast app/server"

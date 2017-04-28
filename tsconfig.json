@@ -16,10 +16,6 @@
     "strictNullChecks": true,
     "target": "es2016"
   },
-  "include": [
-    "**/*.d.ts",
-    "*/bin.ts"
-  ],
   "exclude": [
     "node_modules",
     "**/*.js"
