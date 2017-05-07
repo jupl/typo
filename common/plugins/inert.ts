@@ -1,11 +1,13 @@
 import {Server} from 'hapi'
-import {Plugin, IPlugin} from 'hapiour-decorators'
+import {IPlugin, Plugin} from 'hapiour-decorators'
 import * as inert from 'inert'
 import {resolve} from 'path'
 
-@Plugin({name: 'hapi-ejs', version: '0.0.1'})
+/** Plugin to serve static assets */
+@Plugin({name: 'hapi-inert', version: '0.0.1'})
 export class InertPlugin implements IPlugin {
-  public async register(server: Server, _options: {}, next: Function) {
+  /** Register Inert and add route for static assets */
+  async register(server: Server, _options: {}, next: Function) {
     await server.register(inert)
     server.route({
       method: 'GET',

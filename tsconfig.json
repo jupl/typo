@@ -4,16 +4,13 @@
     "experimentalDecorators": true,
     "jsx": "preserve",
     "maxNodeModuleJsDepth": 1,
-    "module": "commonjs",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "build",
-    "strictNullChecks": true,
+    "strict": true,
     "target": "es2015"
   },
   "awesomeTypescriptLoaderOptions": {

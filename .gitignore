@@ -1,5 +1,4 @@
 /.awcache/
-/build/
 /static/
 *.js
 .env

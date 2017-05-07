@@ -1,10 +1,12 @@
+import {IReply, Request} from 'hapi'
 import {Module, Route} from 'hapiour-decorators'
-import {Request, IReply} from 'hapi'
 
+/** App routes */
 @Module({basePath: '/'})
 export class Routes {
+  /** GET placeholder */
   @Route({method: 'GET', path: 'placeholder'})
-  public index(_request: Request, reply: IReply) {
+  index(_request: Request, reply: IReply) {
     reply('Placeholder')
   }
 }
