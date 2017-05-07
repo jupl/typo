@@ -25,7 +25,7 @@ if(Object.keys(clientConfiguration.entry).length > 1) {
 /** Webpack configuration to build server */
 export const serverConfiguration = addToEntries(createConfiguration({
   log: message => console.log(`[server] ${message}`),
-  pattern: ['**/bin.ts'],
+  pattern: ['**/main.ts'],
   target: 'node',
 }), ['dotenv/config'])
 
