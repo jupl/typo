@@ -1,12 +1,9 @@
 {
-  "name": "Application",
+  "name": "app",
   "version": "0.0.1",
   "private": true,
-  "engines": {
-    "node": "^6.0.0 || ^7.0.0",
-    "npm": "^3.0.0 || ^4.0.0"
-  },
   "jest": {
+    "mapCoverage": true,
     "moduleFileExtensions": [
       "js",
       "json",
@@ -15,7 +12,6 @@
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/common/setup-tests.ts",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
-    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
     "transform": {
       ".tsx?": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     }
@@ -35,39 +31,32 @@
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build"
   },
-  "dependencies": {
-    "@types/copy-webpack-plugin": "^4.0.0",
-    "@types/globule": "^1.1.3",
+  "devDependencies": {
     "@types/hapi": "^16.0.0",
     "@types/jest": "^19.2.2",
     "@types/node": "^7.0.0",
     "@types/webpack": "^2.2.14",
     "@types/webpack-env": "^1.13.0",
-    "awesome-typescript-loader": "^3.1.2",
     "babel-plugin-transform-inline-environment-variables": "^0.0.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.4.0",
-    "babili-webpack-plugin": "^0.0.11",
-    "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
+    "eslint-config-jupl": "^0.6.2",
     "file-loader": "^0.11.1",
-    "globule": "^1.1.0",
-    "normalize.css": "^6.0.0",
-    "style-loader": "^0.16.1",
-    "trash-cli": "^1.4.0",
-    "typescript": "^2.1.4",
-    "webpack": "^2.4.1"
-  },
-  "devDependencies": {
-    "eslint-config-jupl": "^0.5.3",
     "hapi": "^16.1.1",
     "hapi-es7-async-handler": "^1.0.6",
     "hapi-webpack-plugin": "^2.0.0",
     "hapiour-decorators": "^1.2.0",
-    "jest": "^19.0.2",
-    "ts-jest": "^19.0.6",
+    "jest": "^20.0.0",
+    "normalize.css": "^7.0.0",
+    "style-loader": "^0.17.0",
+    "trash-cli": "^1.4.0",
+    "ts-jest": "^20.0.0",
     "ts-node": "^3.0.2",
-    "tslint": "^4.1.0"
+    "tslint": "^5.2.0",
+    "typescript": "^2.1.4",
+    "wcb": "^0.2.1",
+    "webpack": "^2.4.1"
   }
 }

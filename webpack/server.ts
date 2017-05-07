@@ -1,15 +1,20 @@
 import {App, Plugins, bootstrap} from 'hapiour-decorators'
-import {WebpackPlugin} from './plugins/webpack'
 import {Server} from '../common/server'
+import {WebpackPlugin} from './plugins/webpack'
 
 const RADIX = 10
 const DEFAULT_PORT = 3000
-const port = parseInt(process.env.PORT, RADIX) || DEFAULT_PORT
+let port = parseInt(process.env.PORT, RADIX)
+if(isNaN(port)) {
+  port = DEFAULT_PORT
+}
 
+/** Development server that serves up Webpack assets */
 @App({port})
 @Plugins([WebpackPlugin])
 export class WebpackServer extends Server {}
 
-if(!module.parent) {
+// tslint:disable-next-line no-null-keyword
+if(module.parent === null) {
   bootstrap(WebpackServer)
 }
