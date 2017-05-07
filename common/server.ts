@@ -1,14 +1,17 @@
 import {Server as HapiServer} from 'hapi'
 import {IApp} from 'hapiour-decorators'
 
-export class Server implements IApp {
+/** Base server application */
+export abstract class Server implements IApp {
+  /** Hapi server instance */
   protected server: HapiServer
 
   constructor(server: HapiServer) {
     this.server = server
   }
 
-  public onStart() {
+  /** When app starts, output uri */
+  onStart() {
     console.log('Server running at:', this.server.info.uri)
   }
 }

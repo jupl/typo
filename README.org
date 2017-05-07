@@ -50,6 +50,7 @@ typo/
 ├─ package.json         # Configuration, tasks, and dependencies
 ├─ tsconfig.json        # TypeScript configuration
 ├─ tslint.json          # TypeScript linting rules
+├─ webpack.config.ts    # Webpack build configuration
 └─ yarn.lock            # Dependency pinning from Yarn
 #+END_EXAMPLE
 *** Other Files
@@ -103,5 +104,7 @@ Cleans up JS code that was generated from building with =package=.
   - [[https://github.com/fgnass/node-dev][node-dev]]
 - Testing
   - [[https://facebook.github.io/jest/][Jest]]
+- Build Tools
+  - [[https://webpack.js.org/][Webpack]]
 
 ^{[[#typo-typescript-boilerplate][Back to top]]}

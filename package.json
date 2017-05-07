@@ -1,13 +1,10 @@
 {
-  "name": "application",
+  "name": "app",
   "version": "0.0.1",
   "private": true,
   "bin": "app/bin.js",
-  "engines": {
-    "node": "^6.0.0 || ^7.0.0",
-    "npm": "^3.0.0 || ^4.0.0"
-  },
   "jest": {
+    "mapCoverage": true,
     "moduleFileExtensions": [
       "js",
       "json",
@@ -16,21 +13,22 @@
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/common/setup-tests.ts",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
-    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
     "transform": {
       ".tsx?": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     }
   },
   "scripts": {
-    "package": "npm run clean && npm run build:server && npm pack && npm run clean",
-    "clean": "trash '**/*.js' build '!node_modules/**'",
+    "package": "npm run build:prod && npm pack && npm run clean",
+    "clean": "trash '**/*.js' '!node_modules/**' '!coverage/**'",
     "coverage": "npm run test -- --coverage",
     "coverage:watch": "npm run coverage -- --watch",
     "lint": "tslint --type-check --project tsconfig.json",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "build:server": "tsc --project tsconfig.build.json && cross-env NODE_ENV=production babili build -d . --plugins transform-node-env-inline",
+    "build": "npm run clean && webpack",
+    "build:dev": "cross-env NODE_ENV=development npm run build",
+    "build:prod": "cross-env NODE_ENV=production npm run build",
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development node-dev -r ts-node/register app/server.ts",
     "server:prod": "ts-node --fast app/server"
@@ -45,16 +43,17 @@
     "@types/hapi": "^16.0.0",
     "@types/jest": "^19.2.2",
     "@types/node": "^7.0.0",
-    "babel-plugin-transform-node-env-inline": "^0.0.2",
-    "babili": "^0.0.12",
+    "@types/webpack": "^2.2.15",
     "cross-env": "^4.0.0",
-    "eslint-config-jupl": "^0.5.3",
-    "jest": "^19.0.2",
+    "eslint-config-jupl": "^0.6.0",
+    "jest": "^20.0.0",
     "node-dev": "^3.1.3",
     "trash-cli": "^1.4.0",
-    "ts-jest": "^19.0.6",
+    "ts-jest": "^20.0.0",
     "ts-node": "^3.0.2",
-    "tslint": "^4.1.0",
-    "typescript": "^2.1.4"
+    "tslint": "^5.2.0",
+    "typescript": "^2.1.4",
+    "wcb": "^0.2.0",
+    "webpack": "^2.4.1"
   }
 }
