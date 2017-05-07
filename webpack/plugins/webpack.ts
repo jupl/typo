@@ -5,7 +5,7 @@ import {
   PluginConfigurator,
 } from 'hapiour-decorators'
 import * as webpack from 'webpack'
-import {clientConfiguration} from '../../webpack.config'
+import {configuration} from '../../webpack.config.client'
 
 /** Plugin to include assets from Webpack for development */
 @PluginConfigurator(hapiWebpack)
@@ -15,10 +15,10 @@ export class WebpackPlugin implements IPluginConfigurator {
 
   constructor() {
     this.options = {
-      compiler: webpack(clientConfiguration),
+      compiler: webpack(configuration),
       assets: {
         noInfo: true,
-        publicPath: clientConfiguration.output.publicPath,
+        publicPath: configuration.output.publicPath,
       },
     }
   }
