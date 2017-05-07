@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.0.1",
   "private": true,
-  "bin": "app/bin.js",
+  "bin": "app/main.js",
   "jest": {
     "mapCoverage": true,
     "moduleFileExtensions": [
@@ -30,8 +30,8 @@
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build",
     "server": "npm run server:dev",
-    "server:dev": "cross-env NODE_ENV=development node-dev -r ts-node/register app/bin.ts",
-    "server:prod": "ts-node --fast app/bin"
+    "server:dev": "cross-env NODE_ENV=development node-dev -r ts-node/register app/main.ts",
+    "server:prod": "ts-node --fast app/main"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
