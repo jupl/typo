@@ -7,6 +7,7 @@ export let clientConfiguration = addRules(createConfiguration({
   destination: 'static',
   log: message => console.log(`[client] ${message}`),
   source: 'assets',
+  useBabel: true,
 }), [
   {test: /\.css$/, use: ['style-loader', 'css-loader']},
   {test: /\.(gif|jpg|jpeg|png|svg)$/, use: ['file-loader']},
