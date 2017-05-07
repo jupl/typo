@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "bin": "app/main.js",
-  "engines": {
-    "node": "^6.0.0 || ^7.0.0",
-    "npm": "^3.0.0 || ^4.0.0"
-  },
   "jest": {
     "mapCoverage": true,
     "moduleFileExtensions": [
