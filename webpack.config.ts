@@ -30,7 +30,4 @@ export const serverConfiguration = addToEntries(createConfiguration({
 }), ['dotenv/config'])
 
 // tslint:disable-next-line:no-default-export
-export default [
-  clientConfiguration,
-  serverConfiguration,
-]
+export default [clientConfiguration, serverConfiguration]
