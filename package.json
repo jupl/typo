@@ -30,8 +30,8 @@
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build",
     "server": "npm run server:dev",
-    "server:dev": "cross-env NODE_ENV=development node-dev -r ts-node/register app/server.ts",
-    "server:prod": "ts-node --fast app/server"
+    "server:dev": "cross-env NODE_ENV=development node-dev -r ts-node/register app/bin.ts",
+    "server:prod": "ts-node --fast app/bin"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
