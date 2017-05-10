@@ -47,8 +47,7 @@ typo/
 │  └─ setup-tests.ts    # Code that runs before tests are run
 ├─ static/              # Result assets build from build tasks
 ├─ webpack/             # Webpack related code
-│  ├─ config/           # Webpack build configuration builder
-│  └─ index.ts          # Local development server
+│  └─ server.ts         # Local development server
 ├─ package.json         # Configuration, tasks, and dependencies
 ├─ tsconfig.json        # TypeScript configuration
 ├─ tslint.json          # TypeScript linting rules
