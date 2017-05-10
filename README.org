@@ -38,7 +38,7 @@ This is a boilerplate project for developing and packaging web server(s) using [
 #+BEGIN_EXAMPLE
 typo/
 ├─ app/                 # Application domain
-│  ├─ bin.ts            # Application entry point when packaged
+│  ├─ main.ts           # Application entry point
 │  ├─ routes.ts         # Application routes
 │  └─ server.ts         # Application server
 ├─ coverage/            # Code coverage reports
