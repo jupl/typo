@@ -16,3 +16,7 @@ This is a collection of boilerplate projects for developing applications using [
 [[https://travis-ci.org/jupl/typo][file:https://img.shields.io/travis/jupl/typo/combo.svg?label=travis&style=flat-square]]
 [[https://david-dm.org/jupl/typo/combo][file:https://img.shields.io/david/jupl/typo/combo.svg?style=flat-square]]
 [[https://david-dm.org/jupl/typo/combo?type=dev][file:https://img.shields.io/david/dev/jupl/typo/combo.svg?style=flat-square]]
+- [[https://github.com/jupl/typo/tree/electron][Electron]]
+[[https://travis-ci.org/jupl/typo][file:https://img.shields.io/travis/jupl/typo/electron.svg?label=travis&style=flat-square]]
+[[https://david-dm.org/jupl/typo/electron][file:https://img.shields.io/david/jupl/typo/electron.svg?style=flat-square]]
+[[https://david-dm.org/jupl/typo/electron?type=dev][file:https://img.shields.io/david/dev/jupl/typo/electron.svg?style=flat-square]]
