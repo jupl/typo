@@ -36,7 +36,7 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "server": "npm run server:hot",
-    "server:base": "cross-env PORT=3000 electron -r ts-node/register assets/main.ts",
+    "server:base": "electron -r ts-node/register assets/main.ts",
     "server:dev": "cross-env NODE_ENV=development npm run server:base",
     "server:hot": "cross-env HOT_MODULES=true npm run server:dev",
     "server:prod": "cross-env NODE_ENV=production npm run server:base",

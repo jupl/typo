@@ -3,7 +3,11 @@ import {Server} from '../common/server'
 import {WebpackPlugin} from './plugins/webpack'
 
 const RADIX = 10
-const port = parseInt(process.env.PORT, RADIX)
+const DEFAULT_PORT = 3000
+let port = parseInt(process.env.PORT, RADIX)
+if(isNaN(port)) {
+  port = DEFAULT_PORT
+}
 
 /** Development server that serves up Webpack assets */
 @App({port})
