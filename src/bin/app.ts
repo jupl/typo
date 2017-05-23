@@ -1,4 +1,4 @@
 import {bootstrap} from 'hapiour-decorators'
-import {AppServer} from './server'
+import {AppServer} from '../app/server'
 
 bootstrap(AppServer)

@@ -3,8 +3,9 @@ import {BannerPlugin} from 'webpack'
 
 // Build base configuration
 let configuration = addToEntries(createConfiguration({
+  destination: 'dist/bin',
   log: message => console.log(message),
-  pattern: ['**/main.ts'],
+  source: 'src/bin',
   target: 'node',
 }), ['dotenv/config'])
 

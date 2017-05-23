@@ -37,21 +37,24 @@ This is a boilerplate project for developing and packaging web server(s) using [
 *** Overview
 #+BEGIN_EXAMPLE
 typo/
-├─ app/                 # Application domain
-│  ├─ main.ts           # Application entry point
-│  ├─ routes.ts         # Application routes
-│  └─ server.ts         # Application server
-├─ coverage/            # Code coverage reports
-├─ common/              # Shared domain
-│  ├─ plugins/          # Shared plugins
-│  ├─ declarations.d.ts # TypeScript declarations
-│  ├─ server.ts         # Base server class
-│  └─ setup-tests.ts    # Code that runs before tests are run
-├─ package.json         # Configuration, tasks, and dependencies
-├─ tsconfig.json        # TypeScript configuration
-├─ tslint.json          # TypeScript linting rules
-├─ webpack.config.ts    # Webpack build configuration
-└─ yarn.lock            # Dependency pinning from Yarn
+├─ dist/bin/         # Result entry points from build tasks
+├─ src/              # Source code
+│  ├─ app/           # Application domain
+│  │  ├─ routes.ts   # Application routes
+│  │  └─ server.ts   # Application server
+│  ├─ bin/           # Executable entry points
+│  │  └─ app.ts      # Application entry point
+│  └─ common/        # Shared domain
+│     ├─ plugins/    # Shared plugins
+│     └─ server.ts   # Base server class
+├─ coverage/         # Code coverage reports
+├─ declarations.d.ts # TypeScript declarations
+├─ package.json      # Configuration, tasks, and dependencies
+├─ setup-tests.ts    # Code that runs before tests are run
+├─ tsconfig.json     # TypeScript configuration
+├─ tslint.json       # TypeScript linting rules
+├─ webpack.config.ts # Webpack build configuration
+└─ yarn.lock         # Dependency pinning from Yarn
 #+END_EXAMPLE
 *** Other Files
 **** =*.test.ts=, =*.test.tsx=
