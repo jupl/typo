@@ -10,7 +10,7 @@
       "ts",
       "tsx"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/common/setup-tests.ts",
+    "setupTestFrameworkScriptFile": "<rootDir>/setup-tests.ts",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
     "transform": {
       ".tsx?": "<rootDir>/node_modules/ts-jest/preprocessor.js"
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "npm run build:prod",
-    "clean": "trash static",
+    "clean": "trash dist",
     "coverage": "npm run test -- --coverage",
     "coverage:watch": "npm run coverage -- --watch",
     "lint": "tslint --type-check --project tsconfig.json",
@@ -26,7 +26,7 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "server": "npm run server:hot",
-    "server:hot": "cross-env NODE_ENV=development HOT_MODULES=true ts-node webpack/server",
+    "server:hot": "cross-env NODE_ENV=development HOT_MODULES=true ts-node src/webpack/server",
     "build": "npm run clean && webpack",
     "build:dev": "cross-env NODE_ENV=development npm run build",
     "build:prod": "cross-env NODE_ENV=production npm run build"
@@ -40,7 +40,7 @@
     "babel-plugin-transform-inline-environment-variables": "^0.0.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.4.0",
-    "cross-env": "^4.0.0",
+    "cross-env": "^5.0.0",
     "css-loader": "^0.28.0",
     "eslint-config-jupl": "^0.6.2",
     "file-loader": "^0.11.1",
