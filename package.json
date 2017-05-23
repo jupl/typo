@@ -44,7 +44,7 @@
     "@types/jest": "^19.2.2",
     "@types/node": "^7.0.0",
     "@types/webpack": "^2.2.15",
-    "cross-env": "^4.0.0",
+    "cross-env": "^5.0.0",
     "eslint-config-jupl": "^0.6.0",
     "jest": "^20.0.0",
     "node-dev": "^3.1.3",
