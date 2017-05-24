@@ -43,7 +43,7 @@ typo/
 │  ├─ assets/        # Static files and entry points to include in builds
 │  │  └─ index.ts    # An application entry point
 │  ├─ common/        # Shared domain
-│  │  ├─ server.ts   # Base server class
+│  │  └─ server.ts   # Base server class
 │  └─ webpack/       # Webpack related code
 │     ├─ plugins/    # Webpack plugins
 │     ├─ config.ts   # Client webpack build configuration
