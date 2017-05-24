@@ -3,10 +3,10 @@ import {optimize} from 'webpack'
 
 /** Webpack configuration to build client assets */
 export let configuration = addRules(createConfiguration({
-  assets: 'assets',
-  destination: 'static',
+  assets: 'src/assets',
+  destination: 'dist/assets',
   log: message => console.log(`[client] ${message}`),
-  source: 'assets',
+  source: 'src/assets',
   useBabel: true,
 }), [
   {test: /\.css$/, use: ['style-loader', 'css-loader']},

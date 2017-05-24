@@ -9,15 +9,14 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "build",
     "strict": true,
     "target": "es2015"
   },
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true
   },
-  "exclude": [
-    "node_modules",
-    "**/*.js"
+  "include": [
+    "src",
+    "*.ts"
   ]
 }

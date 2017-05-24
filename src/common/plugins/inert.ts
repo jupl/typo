@@ -1,7 +1,7 @@
 import {Server} from 'hapi'
 import {IPlugin, Plugin} from 'hapiour-decorators'
 import * as inert from 'inert'
-import {resolve} from 'path'
+import {resolve} from '../path'
 
 /** Plugin to serve static assets */
 @Plugin({name: 'hapi-inert', version: '0.0.1'})
@@ -14,7 +14,7 @@ export class InertPlugin implements IPlugin {
       path: '/{p*}',
       handler: {
         directory: {
-          path: resolve(__dirname, '../../static'),
+          path: resolve('assets'),
         },
       },
     })

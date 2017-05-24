@@ -3,8 +3,9 @@ import {BannerPlugin} from 'webpack'
 
 /** Webpack configuration to build server */
 export let configuration = addToEntries(createConfiguration({
+  destination: 'dist/bin',
   log: message => console.log(`[server] ${message}`),
-  pattern: ['**/main.ts'],
+  source: 'src/bin',
   target: 'node',
 }), ['dotenv/config'])
 
