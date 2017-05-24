@@ -40,7 +40,7 @@
     "hapiour-decorators": "^1.2.0"
   },
   "devDependencies": {
-    "@types/hapi": "^16.0.0",
+    "@types/hapi": "~16.0.0",
     "@types/jest": "^19.2.2",
     "@types/node": "^7.0.0",
     "@types/webpack": "^2.2.15",
