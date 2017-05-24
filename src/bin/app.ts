@@ -1,8 +1,8 @@
 import {app} from 'electron'
-import {join} from 'path'
+import {resolve} from '../common/path'
 import {createWindowFactory} from '../common/window'
 
-let basePath = `file://${join(__dirname, '../assets')}`
+let basePath = `file://${resolve('assets')}`
 if(process.env.WEBPACK_BUILD !== 'true') {
   // tslint:disable-next-line:no-var-requires
   const {bootstrap} = require('hapiour-decorators')
