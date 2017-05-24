@@ -20,7 +20,7 @@
       "ts",
       "tsx"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/common/setup-tests.ts",
+    "setupTestFrameworkScriptFile": "<rootDir>/setup-tests.ts",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
     "transform": {
       ".tsx?": "<rootDir>/node_modules/ts-jest/preprocessor.js"
