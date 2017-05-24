@@ -5,7 +5,7 @@ import {
   PluginConfigurator,
 } from 'hapiour-decorators'
 import * as webpack from 'webpack'
-import {configuration} from '../../webpack.config.renderer'
+import {configuration} from '../config/renderer'
 
 /** Plugin to include assets from Webpack for development */
 @PluginConfigurator(hapiWebpack)

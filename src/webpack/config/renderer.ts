@@ -2,12 +2,10 @@ import {addRules, createConfiguration} from 'wcb'
 
 /** Webpack configuration to build renderer process */
 export const configuration = addRules(createConfiguration({
-  assets: 'assets',
-  assetsIgnore: ['**/*.ts{,x}'],
-  destination: 'static',
+  assets: 'src/assets',
+  destination: 'dist/assets',
   log: message => console.log(`[renderer] ${message}`),
-  pattern: ['**/*.ts{,x}', '!**/main.ts'],
-  source: 'assets',
+  source: 'src/assets',
   target: 'electron-renderer',
 }), [
   {test: /\.css$/, use: ['style-loader', 'css-loader']},

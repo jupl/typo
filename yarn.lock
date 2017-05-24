@@ -32,7 +32,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/hapi@^16.0.0", "@types/hapi@^16.0.6":
+"@types/hapi@^16.0.0", "@types/hapi@~16.0.6":
   version "16.0.6"
   resolved "https://registry.yarnpkg.com/@types/hapi/-/hapi-16.0.6.tgz#bb7d15db979b43e132c6d8f5acf21581514a3819"
   dependencies:
@@ -130,7 +130,7 @@ ajv@^4.7.0, ajv@^4.9.1:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
-ajv@^5.0.1:
+ajv@^5.0.0, ajv@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.0.1.tgz#5fd1a8f5cc92b371aa86445b1152fd4dec844ac9"
   dependencies:
@@ -1205,9 +1205,9 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
     create-hash "^1.1.0"
     inherits "^2.0.1"
 
-cross-env@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-4.0.0.tgz#16083862d08275a4628b0b243b121bedaa55dd80"
+cross-env@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.0.0.tgz#565ccae4d09676441a5087f406fe7661a29c931b"
   dependencies:
     cross-spawn "^5.1.0"
     is-windows "^1.0.0"
@@ -4258,6 +4258,12 @@ sax@^1.2.1, sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"
 
+schema-utils@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.3.0.tgz#f5877222ce3e931edae039f17eb3716e7137f8cf"
+  dependencies:
+    ajv "^5.0.0"
+
 semver-diff@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/semver-diff/-/semver-diff-2.1.0.tgz#4bbb8437c8d37e4b0cf1a68fd726ec6d645d6d36"
@@ -4509,11 +4515,12 @@ strip-json-comments@^2.0.0, strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-style-loader@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.17.0.tgz#e8254bccdb7af74bd58274e36107b4d5ab4df310"
+style-loader@^0.18.1:
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.18.1.tgz#6afca8953c842830e5e2dc84796309880a97f7e8"
   dependencies:
     loader-utils "^1.0.2"
+    schema-utils "^0.3.0"
 
 subtext@^4.3.x:
   version "4.4.0"
