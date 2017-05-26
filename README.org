@@ -41,13 +41,10 @@ typo/
 ├─ dist/bin/         # Result entry points from build tasks
 ├─ src/              # Source code
 │  ├─ app/           # Application domain
-│  │  ├─ routes.ts   # Application routes
-│  │  └─ server.ts   # Application server
+│  │  └─ routes/     # Application routes
 │  ├─ bin/           # Executable entry points
 │  │  └─ app.ts      # Application entry point
 │  └─ common/        # Shared domain
-│     ├─ plugins/    # Shared plugins
-│     └─ server.ts   # Base server class
 ├─ declarations.d.ts # TypeScript declarations
 ├─ package.json      # Configuration, tasks, and dependencies
 ├─ setup-tests.ts    # Code that runs before tests are run
@@ -105,7 +102,6 @@ Cleans up JS code that was generated from building with =package=.
 - Libraries
   - [[https://github.com/motdotla/dotenv][dotenv]]
   - [[https://hapijs.com/][Hapi]]
-  - [[https://github.com/Boulangerie/hapiour-decorators][Hapiour Decorators]]
   - [[https://github.com/eseom/hapi-es7-async-handler][Hapi ES7 Async Handler]]
 - Development Tools
   - [[https://github.com/fgnass/node-dev][node-dev]]
