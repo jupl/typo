@@ -43,18 +43,16 @@ typo/
 │  └─ bin/           # Result entry points
 ├─ src/              # Source code
 │  ├─ app/           # Application domain
-│  │  ├─ routes.ts   # Application routes
-│  │  └─ server.ts   # Application server
+│  │  └─ routes/     # Application routes
 │  ├─ assets/        # Static files and entry points to include in builds
 │  │  └─ app.ts      # An application client-side entry point
 │  ├─ bin/           # Executable entry points
 │  │  └─ app.ts      # App executable entry point
 │  ├─ common/        # Shared domain
-│  │  ├─ plugins/    # Common plugins
-│  │  └─ server.ts   # Base server class
+│  │  └─ plugin/     # Common plugins
 │  └─ webpack/       # Webpack related code
 │     ├─ config/     # Webpack build configurations
-│     └─ plugins/    # Webpack plugins
+│     └─ plugin/     # Webpack plugins
 ├─ declarations.d.ts # TypeScript declarations
 ├─ package.json      # Configuration, tasks, and dependencies
 ├─ setup-tests.ts    # Code that runs before tests are run
@@ -123,7 +121,6 @@ Cleans up JS code that was generated from building with =package=, =build:dev=, 
 - Libraries
   - [[https://github.com/motdotla/dotenv][dotenv]]
   - [[https://hapijs.com/][Hapi]]
-  - [[https://github.com/Boulangerie/hapiour-decorators][Hapiour Decorators]]
   - [[https://github.com/eseom/hapi-es7-async-handler][Hapi ES7 Async Handler]]
   - [[https://necolas.github.io/normalize.css/][normalize.css]]
 - Development Tools
