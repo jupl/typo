@@ -1,6 +1,5 @@
-import {App, Plugins} from 'hapiour-decorators'
-import {Server} from '../common/server'
-import {WebpackPlugin} from './plugins/webpack'
+import {Server} from 'hapi'
+import * as webpack from './plugin'
 
 const RADIX = 10
 const DEFAULT_PORT = 3000
@@ -9,7 +8,18 @@ if(isNaN(port)) {
   port = DEFAULT_PORT
 }
 
-/** Development server that serves up Webpack assets */
-@App({port})
-@Plugins([WebpackPlugin])
-export class WebpackServer extends Server {}
+/**
+ * Create assets server
+ * @return Hapi server instance
+ */
+export function createServer() {
+  const server = new Server()
+  server.connection({port})
+  startServer(server)
+  return server
+}
+
+async function startServer(server: Server) {
+  await server.register(webpack)
+  await server.start()
+}

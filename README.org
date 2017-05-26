@@ -47,7 +47,6 @@ typo/
 │  ├─ bin/           # Electron main entry points
 │  │  └─ app.ts      # App main entry point
 │  ├─ common/        # Shared domain
-│  │  ├─ server.ts   # Base server class
 │  │  └─ window.ts   # Helper for creating electron windows
 │  └─ webpack/       # Webpack related code
 │     ├─ config/     # Webpack build configurations

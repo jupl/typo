@@ -5,11 +5,8 @@ import {createWindowFactory} from '../common/window'
 let basePath = `file://${resolve('assets')}`
 if(process.env.WEBPACK_BUILD !== 'true') {
   // tslint:disable-next-line:no-var-requires
-  const {bootstrap} = require('hapiour-decorators')
-  // tslint:disable-next-line:no-var-requires
-  const {WebpackServer} = require('../webpack/server')
-  const [webpackServer] = bootstrap(WebpackServer)
-  basePath = webpackServer.server.info.uri
+  const {createServer} = require('../webpack/server')
+  basePath = createServer().info.uri
 }
 
 // Set up window when application starts
