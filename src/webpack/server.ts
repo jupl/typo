@@ -1,6 +1,5 @@
-import {App, Plugins, bootstrap} from 'hapiour-decorators'
-import {Server} from '../common/server'
-import {WebpackPlugin} from './plugins/webpack'
+import {Server} from 'hapi'
+import * as webpack from './plugin'
 
 const RADIX = 10
 const DEFAULT_PORT = 3000
@@ -9,12 +8,10 @@ if(isNaN(port)) {
   port = DEFAULT_PORT
 }
 
-/** Development server that serves up Webpack assets */
-@App({port})
-@Plugins([WebpackPlugin])
-export class WebpackServer extends Server {}
-
-// tslint:disable-next-line no-null-keyword
-if(module.parent === null) {
-  bootstrap(WebpackServer)
-}
+(async() => { // tslint:disable-line:no-floating-promises
+  const server = new Server()
+  server.connection({port})
+  await server.register(webpack)
+  await server.start()
+  console.log('Server running at:', server.info!.uri)
+})()

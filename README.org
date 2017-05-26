@@ -43,10 +43,9 @@ typo/
 │  ├─ assets/        # Static files and entry points to include in builds
 │  │  └─ index.ts    # An application entry point
 │  ├─ common/        # Shared domain
-│  │  └─ server.ts   # Base server class
 │  └─ webpack/       # Webpack related code
-│     ├─ plugins/    # Webpack plugins
-│     ├─ config.ts   # Client webpack build configuration
+│     ├─ config/     # Webpack build configurations
+│     ├─ plugin/     # Webpack plugins
 │     └─ server.ts   # Local development server
 ├─ declarations.d.ts # TypeScript declarations
 ├─ package.json      # Configuration, tasks, and dependencies
