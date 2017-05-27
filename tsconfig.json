@@ -15,7 +15,7 @@
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true
   },
-  "inclide": [
+  "include": [
     "src",
     "*.js"
   ]
