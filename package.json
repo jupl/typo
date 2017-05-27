@@ -45,11 +45,11 @@
     "build:prod": "cross-env NODE_ENV=production npm run build"
   },
   "devDependencies": {
-    "@types/electron": "^1.4.37",
     "@types/hapi": "^16.1.2",
     "@types/jest": "^19.2.2",
-    "@types/node": "^7.0.0",
+    "@types/node": "^7.0.22",
     "@types/webpack": "^2.2.15",
+    "@types/webpack-env": "^1.13.0",
     "cross-env": "^5.0.0",
     "css-loader": "^0.28.1",
     "electron": "^1.6.6",

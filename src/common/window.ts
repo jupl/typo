@@ -1,6 +1,6 @@
 import {BrowserWindow} from 'electron'
 
-type Options = Electron.BrowserWindowOptions
+type Options = Electron.BrowserWindowConstructorOptions
 
 // Cache of opened windows to avoid garbage collection
 let windows: Electron.BrowserWindow[] = []
