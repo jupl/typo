@@ -15,7 +15,7 @@ if(isNaN(port)) {
 export function createServer() {
   const server = new Server()
   server.connection({port})
-  startServer(server)
+  startServer(server) // tslint:disable-line:no-floating-promises
   return server
 }
 
