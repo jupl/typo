@@ -3,7 +3,7 @@ import {BannerPlugin} from 'webpack'
 import {cssLoaders} from './common'
 
 /** Webpack configuration to build server */
-export let configuration = addToEntries(addPlugins(createConfiguration({
+export const configuration = addToEntries(addPlugins(createConfiguration({
   cssLoaders,
   destination: 'dist/bin',
   log: message => console.log(`[server] ${message}`),

@@ -2,7 +2,7 @@ import {addRules, createConfiguration} from 'wcb'
 import {cssLoaders} from './common'
 
 /** Webpack configuration to build client assets */
-export let configuration = addRules(createConfiguration({
+export const configuration = addRules(createConfiguration({
   assets: 'src/assets',
   common: true,
   cssLoaders,
