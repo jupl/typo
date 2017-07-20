@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "bin": "dist/bin/app.js",
+  "engines": {
+    "node": ">=8"
+  },
   "jest": {
     "mapCoverage": true,
     "moduleFileExtensions": [
