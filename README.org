@@ -102,7 +102,6 @@ Cleans up JS code that was generated from building with =package=.
 - Libraries
   - [[https://github.com/motdotla/dotenv][dotenv]]
   - [[https://hapijs.com/][Hapi]]
-  - [[https://github.com/eseom/hapi-es7-async-handler][Hapi ES7 Async Handler]]
 - Development Tools
   - [[https://github.com/fgnass/node-dev][node-dev]]
 - Testing
