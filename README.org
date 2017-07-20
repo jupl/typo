@@ -121,7 +121,6 @@ Cleans up JS code that was generated from building with =package=, =build:dev=, 
 - Libraries
   - [[https://github.com/motdotla/dotenv][dotenv]]
   - [[https://hapijs.com/][Hapi]]
-  - [[https://github.com/eseom/hapi-es7-async-handler][Hapi ES7 Async Handler]]
   - [[https://necolas.github.io/normalize.css/][normalize.css]]
 - Development Tools
   - [[https://github.com/fgnass/node-dev][node-dev]]
