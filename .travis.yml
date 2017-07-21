@@ -1,7 +1,6 @@
 sudo: false
 language: node_js
 node_js:
-  - "6"
   - "node"
 # The script actions are to check the project is valid.
 # If using Travis for the project PLEASE MODIFY/REMOVE AS NEEDED.
