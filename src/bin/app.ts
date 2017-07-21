@@ -3,7 +3,8 @@ import * as appRoutes from '../app/routes'
 
 const RADIX = 10
 const DEFAULT_PORT = 3000
-let port = parseInt(process.env.PORT, RADIX)
+const envPort = process.env.PORT
+let port = parseInt(envPort !== undefined ? envPort : '', RADIX)
 const security = process.env.NODE_ENV !== 'development'
 if(isNaN(port)) {
   port = DEFAULT_PORT
