@@ -69,7 +69,7 @@
     "tslint": "^5.2.0",
     "tslint-language-service": "^0.9.6",
     "typescript": "^2.1.4",
-    "wcb": "^0.3.5",
+    "wcb": "^0.4.0",
     "webpack": "^3.3.0"
   }
 }
