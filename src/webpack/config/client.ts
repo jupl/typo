@@ -1,6 +1,6 @@
 import {createConfiguration} from 'wcb'
 
-// Build configuration
+/** Webpack configuration */
 export const configuration = createConfiguration({
   assets: 'src/assets',
   common: true,
