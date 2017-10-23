@@ -7,8 +7,8 @@ let windows: Electron.BrowserWindow[] = []
 
 /**
  * Build base Webpack configuration with defaults that can be expanded upon
- * @property url URL for window to open
- * @property options Electron broser window options
+ * @param url URL for window to open
+ * @param options Electron broser window options
  * @return Webpack configuration
  */
 export function createWindowFactory(url: string, options?: Options) {
