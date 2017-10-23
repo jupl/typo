@@ -1,8 +1,8 @@
 import {addPlugins, addToEntries, createConfiguration} from 'wcb'
 import {BannerPlugin} from 'webpack'
 
-// Build base configuration
-const configuration = addToEntries(addPlugins(createConfiguration({
+// tslint:disable-next-line:no-default-export
+export default addToEntries(addPlugins(createConfiguration({
   destination: 'dist/bin',
   log: message => console.log(message),
   source: 'src/bin',
@@ -14,6 +14,3 @@ const configuration = addToEntries(addPlugins(createConfiguration({
     raw: true,
   }),
 ]), ['dotenv/config'])
-
-// tslint:disable-next-line:no-default-export
-export default configuration
