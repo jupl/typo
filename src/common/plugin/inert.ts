@@ -4,8 +4,13 @@ import {resolve} from '../path'
 
 Object.assign(register, {attributes: {name: 'common-inert'}})
 
-/** Add static resources */
-export async function register(server: Server, _: {}, next: Function) {
+/**
+ * Add static resources
+ * @param server Hapi server instance
+ * @param _options Unused options
+ * @param next Post calllback
+ */
+export async function register(server: Server, _options: {}, next: Function) {
   await server.register(inert as any) // tslint:disable-line:no-any
   server.route({
     method: 'GET',

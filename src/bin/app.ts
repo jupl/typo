@@ -1,10 +1,9 @@
 import {Server} from 'hapi'
 import * as appRoutes from '../app/routes'
 
-const RADIX = 10
 const DEFAULT_PORT = 3000
 const envPort = process.env.PORT
-let port = parseInt(envPort !== undefined ? envPort : '', RADIX)
+let port = parseInt(envPort !== undefined ? envPort : '', 10)
 const security = process.env.NODE_ENV !== 'development'
 if(isNaN(port)) {
   port = DEFAULT_PORT
