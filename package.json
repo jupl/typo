@@ -16,6 +16,10 @@
     ]
   },
   "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/jest/"
+    ],
     "mapCoverage": true,
     "moduleFileExtensions": [
       "js",
@@ -23,7 +27,7 @@
       "ts",
       "tsx"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/setup-tests.ts",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest/setup.ts",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
     "transform": {
       ".tsx?": "<rootDir>/node_modules/ts-jest/preprocessor.js"
