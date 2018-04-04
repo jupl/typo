@@ -10,9 +10,8 @@ if(isNaN(port)) {
 }
 
 (async() => { // tslint:disable-line:no-floating-promises
-  const server = new Server()
-  server.connection({port, routes: {security}})
+  const server = new Server({port, routes: {security}})
   await server.register(appRoutes)
   await server.start()
-  console.log('Server running at:', server.info!.uri)
+  console.log('Server running at:', server.info.uri)
 })()
