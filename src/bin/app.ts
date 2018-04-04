@@ -13,10 +13,9 @@ if(isNaN(port)) {
   const assets = process.env.NODE_ENV === 'development'
     ? require('../webpack/plugin')
     : require('../common/plugin/inert')
-  const server = new Server()
-  server.connection({port, routes: {security}})
+  const server = new Server({port, routes: {security}})
   await server.register(appRoutes)
   await server.register(assets)
   await server.start()
-  console.log('Server running at:', server.info!.uri)
+  console.log('Server running at:', server.info.uri)
 })()
