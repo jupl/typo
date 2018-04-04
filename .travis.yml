@@ -6,5 +6,4 @@ node_js:
 # If using Travis for the project PLEASE MODIFY/REMOVE AS NEEDED.
 script:
   - yarn lint
-  - yarn coverage
   - yarn package
