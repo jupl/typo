@@ -13,8 +13,7 @@ if(isNaN(port)) {
  * @return Hapi server instance
  */
 export function createServer() {
-  const server = new Server()
-  server.connection({port})
+  const server = new Server({port})
   startServer(server) // tslint:disable-line:no-floating-promises
   return server
 }

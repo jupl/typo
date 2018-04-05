@@ -1,9 +1,8 @@
-import * as hapiWebpackPlugin from 'hapi-webpack-plugin'
 import * as webpack from 'webpack'
 import {configuration} from '../config/renderer'
 
-/** Plugin to register */
-export const register = hapiWebpackPlugin
+// Plugin
+export {plugin} from 'hapi-webpack-plugin'
 
 /** Options for plugin */
 export const options = {
