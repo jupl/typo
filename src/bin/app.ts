@@ -10,9 +10,19 @@ if(isNaN(port)) {
 }
 
 (async() => { // tslint:disable-line:no-floating-promises
-  const assets = process.env.NODE_ENV === 'development'
-    ? require('../webpack/plugin')
-    : require('../common/plugin/inert')
+  // Set up client assets based on environment
+  let assets
+  if(process.env.NODE_ENV !== 'development') {
+    assets = require('../common/plugin/inert')
+  }
+  else {
+    assets = require('../webpack/plugin')
+    if(process.env.HOT_MODULES === 'true') {
+      process.on('SIGTERM', () => process.exit(0))
+    }
+  }
+
+  // Start up server
   const server = new Server({port, routes: {security}})
   await server.register(appRoutes)
   await server.register(assets)
