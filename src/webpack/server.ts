@@ -14,11 +14,12 @@ if(isNaN(port)) {
  */
 export function createServer() {
   const server = new Server({port})
-  startServer(server) // tslint:disable-line:no-floating-promises
-  return server
-}
 
-async function startServer(server: Server) {
-  await server.register(webpack)
-  await server.start()
+  ; // Launch server in the background
+  (async() => { // tslint:disable-line:no-floating-promises
+    await server.register(webpack)
+    await server.start()
+  })()
+
+  return server
 }
