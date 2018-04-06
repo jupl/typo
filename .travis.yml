@@ -5,5 +5,5 @@ node_js:
 # The script actions are to check the project is valid.
 # If using Travis for the project PLEASE MODIFY/REMOVE AS NEEDED.
 script:
-  - yarn lint
-  - yarn package
+  - npm run lint
+  - npm run package
