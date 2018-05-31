@@ -1,0 +1,18 @@
+{
+  "coverageDirectory": "<rootDir>/.coverage",
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "<rootDir>/.jest/"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts",
+    "tsx"
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/.jest/setup.ts",
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
+  "transform": {
+    ".tsx?": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+  }
+}
