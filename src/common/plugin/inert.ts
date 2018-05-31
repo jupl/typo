@@ -8,13 +8,13 @@ export const plugin: Plugin<{}> = {
   async register(server) {
     await server.register(inert)
     server.route({
-      method: 'GET',
-      path: '/{p*}',
       handler: {
         directory: {
           path: resolve('assets'),
         },
       },
+      method: 'GET',
+      path: '/{p*}',
     })
   },
 }

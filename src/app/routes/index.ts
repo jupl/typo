@@ -4,8 +4,8 @@ import {Plugin} from 'hapi'
 export const plugin: Plugin<{}> = {
   name: 'app-routes',
   register: server => server.route({
+    handler: () => 'Placeholder',
     method: 'GET',
     path: '/placeholder',
-    handler: () => 'Placeholder',
   }),
 }

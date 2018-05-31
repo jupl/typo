@@ -3,13 +3,15 @@ import {cssLoaders} from './common'
 
 /** Webpack configuration to build client assets */
 export const configuration = addRules(createConfiguration({
-  assets: 'src/assets',
-  common: true,
   cssLoaders,
+  assets: 'src/assets',
+  atlOptions: {
+    useBabel: true,
+  },
+  common: true,
   destination: 'dist/assets',
   log: message => console.log(`[client] ${message}`),
   source: 'src/assets',
-  useBabel: true,
 }), [
   {test: /\.(gif|jpg|jpeg|png|svg)$/, use: ['file-loader']},
 ])
