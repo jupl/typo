@@ -1,6 +1,7 @@
 import {addPlugins, addToEntries, createConfiguration} from 'wcb'
 import {BannerPlugin} from 'webpack'
 
+/** Webpack config for server build */
 export const configuration = addToEntries(addPlugins(createConfiguration({
   destination: 'dist/bin',
   log: message => console.log(message),

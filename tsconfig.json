@@ -3,14 +3,17 @@
     "allowJs": true,
     "maxNodeModuleJsDepth": 1,
     "moduleResolution": "node",
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "build",
     "plugins": [
       {"name": "tslint-language-service"}
     ],
+    "pretty": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
     "strict": true,
     "target": "es2017"
   }
