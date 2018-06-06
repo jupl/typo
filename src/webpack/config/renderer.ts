@@ -3,8 +3,8 @@ import {cssLoaders} from './common'
 
 /** Webpack configuration to build renderer process */
 export const configuration = createConfiguration({
-  assets: 'src/assets',
   cssLoaders,
+  assets: 'src/assets',
   destination: 'dist/assets',
   log: message => console.log(`[renderer] ${message}`),
   source: 'src/assets',
