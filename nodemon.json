@@ -1,0 +1,13 @@
+{
+  "ext": "ts",
+  "execMap": {
+    "ts": "ts-node --transpileOnly"
+  },
+  "ignore": [
+    "**/test.*",
+    "**/*.test.*"
+  ],
+  "watch": [
+    "src/**/*.ts"
+  ]
+}
