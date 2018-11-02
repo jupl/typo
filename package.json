@@ -44,7 +44,7 @@
     "tslint-sonarts": "^1.8.0",
     "typescript": "^3.1.6",
     "typescript-tslint-plugin": "0.0.4",
-    "wcb": "^0.10.0",
+    "wcb": "^0.10.1",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
   }
