@@ -12,9 +12,9 @@
     "lint:file": "tslint --project tsconfig.json",
     "test": "jest --config .jestrc.json",
     "test:watch": "npm run test -- --watch",
-    "build": "npm run clean && webpack",
-    "build:dev": "cross-env NODE_ENV=development npm run build",
-    "build:prod": "cross-env NODE_ENV=production npm run build",
+    "build:base": "npm run clean && webpack",
+    "build:dev": "cross-env NODE_ENV=development npm run build:base",
+    "build:prod": "cross-env NODE_ENV=production npm run build:base",
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development nodemon src/bin/app.ts",
     "server:prod": "cross-env NODE_ENV=production ts-node src/bin/app"
@@ -44,7 +44,7 @@
     "tslint-sonarts": "^1.8.0",
     "typescript": "^3.1.6",
     "typescript-tslint-plugin": "0.0.4",
-    "wcb": "^0.9.0",
+    "wcb": "^0.10.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
   }
