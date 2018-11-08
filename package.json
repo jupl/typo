@@ -10,6 +10,7 @@
     "lint": "tsc && npm run lint:file",
     "lint:file": "tslint --project tsconfig.json",
     "test": "jest --config .jestrc.json",
+    "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch",
     "server": "cross-env NODE_ENV=development HOT_MODULES=true webpack-dev-server",
     "build:base": "npm run clean && webpack",
