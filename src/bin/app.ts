@@ -5,8 +5,9 @@ import {createWindowFactory} from '../common/window'
 let basePath = `file://${resolve('assets')}`
 if(process.env.WEBPACK_BUILD !== 'true') {
   // tslint:disable-next-line:no-var-requires
-  const {createServer} = require('../webpack/server')
-  basePath = createServer().info.uri
+  const {createServer, path} = require('../webpack/server')
+  createServer()
+  basePath = path
 }
 
 // Set up window when application starts
