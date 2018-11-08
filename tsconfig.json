@@ -10,9 +10,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "plugins": [
-      {"name": "tslint-language-service"}
+      {"name": "typescript-tslint-plugin"}
     ],
-    "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
