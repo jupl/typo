@@ -11,6 +11,7 @@
     "lint": "tsc && npm run lint:file",
     "lint:file": "tslint --project tsconfig.json",
     "test": "jest --config .jestrc.json",
+    "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch",
     "build:base": "npm run clean && webpack",
     "build:dev": "cross-env NODE_ENV=development npm run build:base",
