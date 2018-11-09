@@ -13,9 +13,8 @@
     "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch",
     "server": "cross-env HOT_MODULES=true webpack-dev-server --port 3000",
-    "build:base": "npm run clean && webpack",
-    "build:dev": "cross-env npm run build:base",
-    "build:prod": "cross-env NODE_ENV=production npm run build:base"
+    "build:dev": "npm run clean && webpack",
+    "build:prod": "cross-env NODE_ENV=production npm run build:dev"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
