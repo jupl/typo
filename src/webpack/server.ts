@@ -1,7 +1,7 @@
 import {addToEntries} from 'wcb'
 import * as Webpack from 'webpack'
 import * as Server from 'webpack-dev-server'
-import {configuration} from './config/renderer'
+import {configuration as baseConfiguration} from './config/renderer'
 
 const PORT = 3000
 
@@ -13,14 +13,18 @@ export const path = `http://localhost:${PORT}`
  * @return Hapi server instance
  */
 export function createServer() {
-  const config = process.env.HOT_MODULES === 'true'
+  const configuration = {
+    ...baseConfiguration,
+    devServer: {...baseConfiguration.devServer!, port: PORT},
+  }
+  const config = configuration.devServer.hot === true
     ? addToEntries(configuration, [
       `webpack-dev-server/client?${path}`,
       'webpack/hot/only-dev-server',
     ])
     : configuration
   const server = new Server(Webpack(config), {
-    hot: process.env.HOT_MODULES === 'true',
+    hot: configuration.devServer.hot,
     stats: {
       all: false,
       builtAt: true,

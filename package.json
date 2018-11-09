@@ -24,11 +24,10 @@
     "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch",
     "server": "npm run server:dev",
-    "server:dev": "cross-env NODE_ENV=development HOT_MODULES=true ELECTRON_DISABLE_SECURITY_WARNINGS=true electron -r ts-node/register/type-check src/bin/app.ts",
+    "server:dev": "cross-env HOT_MODULES=true ELECTRON_DISABLE_SECURITY_WARNINGS=true electron -r ts-node/register/type-check src/bin/app.ts",
     "server:prod": "cross-env NODE_ENV=production ELECTRON_DISABLE_SECURITY_WARNINGS=true electron -r ts-node/register/transpile-only src/bin/app.ts",
-    "build:base": "npm run clean && webpack",
-    "build:dev": "cross-env NODE_ENV=development npm run build:base",
-    "build:prod": "cross-env NODE_ENV=production npm run build:base"
+    "build:dev": "npm run clean && webpack",
+    "build:prod": "cross-env NODE_ENV=production npm run build:dev"
   },
   "devDependencies": {
     "@jupl/tslint-config": "^0.5.1",
@@ -40,7 +39,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "electron": "^3.0.8",
-    "electron-builder": "^20.31.2",
+    "electron-builder": "^20.33.2",
     "husky": "^1.1.3",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
@@ -55,7 +54,7 @@
     "tslint-sonarts": "^1.8.0",
     "typescript": "^3.1.6",
     "typescript-tslint-plugin": "0.0.5",
-    "wcb": "^0.10.2",
+    "wcb": "^0.11.1",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
