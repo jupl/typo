@@ -10,7 +10,6 @@ export const configuration = addRules(createConfiguration({
   },
   common: true,
   destination: 'dist/assets',
-  hotReload: process.env.HOT_MODULES === 'true' ? 'middleware' : 'none',
   log: message => console.log(`[client] ${message}`),
   source: 'src/assets',
 }), [

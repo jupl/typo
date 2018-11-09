@@ -11,16 +11,9 @@ if(isNaN(port)) {
 
 (async() => { // tslint:disable-line:no-floating-promises
   // Set up client assets based on environment
-  let assets
-  if(process.env.NODE_ENV !== 'development') {
-    assets = require('../common/plugin/inert')
-  }
-  else {
-    assets = require('../webpack/plugin')
-    if(process.env.HOT_MODULES === 'true') {
-      process.on('SIGTERM', () => process.exit(0))
-    }
-  }
+  const assets = process.env.WEBPACK_BUILD === 'true'
+    ? require('../common/plugin/inert')
+    : require('../webpack/plugin')
 
   // Start up server
   const server = new Server({port, routes: {security}})
