@@ -1,9 +1,5 @@
 {
   "coverageDirectory": "<rootDir>/.coverage",
-  "coveragePathIgnorePatterns": [
-    "/node_modules/",
-    "<rootDir>/.jest/"
-  ],
   "preset": "ts-jest",
-  "setupTestFrameworkScriptFile": "<rootDir>/.jest/setup.ts"
+  "setupTestFrameworkScriptFile": "<rootDir>/jest/setup.ts"
 }

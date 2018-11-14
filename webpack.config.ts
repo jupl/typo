@@ -8,7 +8,7 @@ export default createConfiguration({
   },
   common: true,
   cssLoaders: [{test: /\.css$/, use: ['css-loader']}],
-  destination: 'dist/assets',
+  destination: '.dist/assets',
   devServer: true,
   log: message => console.log(message),
   source: 'src/assets',

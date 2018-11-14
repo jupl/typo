@@ -1,9 +1,3 @@
 {
-  "extends": "@jupl/tslint-config",
-  "linterOptions": {
-    "exclude": [
-      ".coverage/**",
-      "dist/**"
-    ]
-  }
+  "extends": "@jupl/tslint-config"
 }
