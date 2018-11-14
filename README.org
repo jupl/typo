@@ -19,16 +19,14 @@ This is a boilerplate project for developing client-side code using [[https://ww
 ** Prerequisites
 - [[https://nodejs.org/en/][Node.js]] (8.x minimum required)
   - [[https://docs.npmjs.com/cli/npm][npm CLI]] is usually included with Node.js
-- [[https://yarnpkg.com/en/docs/install][Yarn]] (recommended)
 - Editor with support for TypeScript, [[https://palantir.github.io/tslint/][TSLint]], and [[http://editorconfig.org/][EditorConfig]] (ex. [[https://code.visualstudio.com/][Visual Studio Code]])
 
 ^{[[#typo-typescript-boilerplate][Back to top]]}
 
 ** Getting Started
 1. Clone/download this repository.
-2. Install dependencies using npm *or* Yarn:
-  - =npm install=
-  - =yarn=
+2. Install dependencies using npm:
+   - =npm install=
 3. Start running tasks as described below in the [[#tasks][tasks section]].
 
 ^{[[#typo-typescript-boilerplate][Back to top]]}
@@ -66,12 +64,10 @@ Generated files/directories when using Jest's [[https://facebook.github.io/jest/
 Tasks can be executed in the following manner:
 #+BEGIN_EXAMPLE
 npm run [command]  # npm
-yarn run [command] # Yarn
 #+END_EXAMPLE
 Examples:
 #+BEGIN_EXAMPLE
 npm run server
-yarn run lint
 #+END_EXAMPLE
 *** =start=
 Alias for =build:prod=.
