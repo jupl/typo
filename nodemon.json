@@ -1,7 +1,7 @@
 {
   "ext": "ts",
   "execMap": {
-    "ts": "ts-node --transpileOnly"
+    "ts": "node --inspect -r ts-node/register/type-check"
   },
   "ignore": [
     "**/test.*",
