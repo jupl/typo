@@ -1,6 +1,6 @@
 import {addToEntries} from 'wcb'
-import * as Webpack from 'webpack'
-import * as Server from 'webpack-dev-server'
+import webpack from 'webpack'
+import Server from 'webpack-dev-server'
 import {configuration as baseConfiguration} from './config/renderer'
 
 const PORT = 3000
@@ -23,7 +23,7 @@ export function createServer() {
       'webpack/hot/only-dev-server',
     ])
     : configuration
-  const server = new Server(Webpack(config), {
+  const server = new Server(webpack(config), {
     hot: configuration.devServer.hot,
     stats: {
       all: false,
