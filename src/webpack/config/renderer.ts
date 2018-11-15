@@ -5,7 +5,7 @@ import {cssLoaders} from './common'
 export const configuration = createConfiguration({
   cssLoaders,
   assets: 'src/assets',
-  destination: '.dist/assets',
+  destination: 'dist/assets',
   devServer: true,
   log: message => console.log(`[renderer] ${message}`),
   source: 'src/assets',
