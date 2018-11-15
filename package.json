@@ -17,7 +17,7 @@
     "build:dev": "cross-env NODE_ENV=development npm run build:base",
     "build:prod": "cross-env NODE_ENV=production npm run build:base",
     "server": "npm run server:dev",
-    "server:dev": "cross-env NODE_ENV=development nodemon src/bin/app.ts",
+    "server:dev": "cross-env NODE_ENV=development nodemon --inspect src/bin/app.ts",
     "server:prod": "cross-env NODE_ENV=production ts-node --transpileOnly src/bin/app"
   },
   "dependencies": {
