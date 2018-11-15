@@ -5,15 +5,21 @@
       "type": "node",
       "request": "attach",
       "name": "Debug Server",
-      "processId": "${command:PickProcess}",
       "restart": true,
-      "protocol": "inspector"
+      "port": 9229
     },
     {
       "type": "chrome",
       "request": "launch",
       "name": "Debug Client",
-      "url": "http://localhost:3000"
+      "url": "http://localhost:3000",
+      "preLaunchTask": "Server"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug",
+      "configurations": ["Debug Server", "Debug Client"]
     }
   ]
 }
