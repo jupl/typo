@@ -17,5 +17,8 @@
     "sourceMap": true,
     "strict": true,
     "target": "es2017"
-  }
+  },
+  "exclude": [
+    "dist"
+  ]
 }

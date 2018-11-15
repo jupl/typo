@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build:prod",
-    "clean": "trash .dist",
+    "clean": "trash dist",
     "coverage": "npm run test -- --coverage",
     "coverage:watch": "npm run coverage -- --watch",
     "lint": "tsc && npm run lint:file",
