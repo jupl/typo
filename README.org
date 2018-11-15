@@ -36,7 +36,7 @@ This is a boilerplate project for developing and packaging web server(s) using [
 #+BEGIN_EXAMPLE
 typo/
 ├─ .coverage/          # Code coverage reports
-├─ .dist/              # Result from build tasks
+├─ dist/               # Result from build tasks
 │  ├─ assets/          # Result assets
 │  └─ bin/             # Result entry points
 ├─ jest/               # Code that runs before tests are run
@@ -100,7 +100,7 @@ Alias for =server:hot=.
 Start server in a development or production environment. To override the port change the environment variable =PORT=.The following is also provided with =server:hot=:
 - [[https://webpack.js.org/concepts/hot-module-replacement][Hot reloading]]
 *** =build:dev= / =build:prod=
-Build client-side code and include assets into a packaged build in the =.dist/= directory. The build for =build:dev= is not minifed and includes source maps, making it ideal for development. The build for =build:prod= is minified (with dead code elimination) and does not include source maps, making it ideal for production.
+Build client-side code and include assets into a packaged build in the =dist/= directory. The build for =build:dev= is not minifed and includes source maps, making it ideal for development. The build for =build:prod= is minified (with dead code elimination) and does not include source maps, making it ideal for production.
 *** =test= / =test:watch= / =coverage= / =coverage:watch=
 Execute tests once or continuously on file changes. In addition, code coverage can be determined. For more information visit the [[https://facebook.github.io/jest/docs/configuration.html][documentation for Jest]].
 *** =lint= / =lint:fix=

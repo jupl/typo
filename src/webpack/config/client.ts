@@ -9,7 +9,7 @@ export const configuration = addRules(createConfiguration({
     useBabel: true,
   },
   common: true,
-  destination: '.dist/assets',
+  destination: 'dist/assets',
   log: message => console.log(`[client] ${message}`),
   source: 'src/assets',
 }), [
