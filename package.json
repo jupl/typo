@@ -2,10 +2,10 @@
   "name": "app",
   "version": "0.0.1",
   "private": true,
-  "bin": ".dist/bin/app.js",
+  "bin": "dist/bin/app.js",
   "scripts": {
     "package": "npm run build:prod && npm pack && npm run clean",
-    "clean": "trash .dist",
+    "clean": "trash dist",
     "coverage": "npm run test -- --coverage",
     "coverage:watch": "npm run coverage -- --watch",
     "lint": "tsc && npm run lint:file",
