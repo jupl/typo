@@ -1,5 +1,5 @@
 import {Plugin} from 'hapi'
-import * as inert from 'inert'
+import inert from 'inert'
 import {resolve} from '../path'
 
 /** Inert plugin */

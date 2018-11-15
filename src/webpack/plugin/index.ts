@@ -1,4 +1,4 @@
-import * as Webpack from 'webpack'
+import webpack from 'webpack'
 import {configuration} from '../config/client'
 
 // Plugin
@@ -14,5 +14,5 @@ export const options = {
       poll: 1000,
     },
   },
-  compiler: Webpack(configuration),
+  compiler: webpack(configuration),
 }
