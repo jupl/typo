@@ -12,7 +12,8 @@
     "test": "jest --config .jestrc.json",
     "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch",
-    "server": "cross-env HOT_MODULES=true webpack-dev-server --port 3000",
+    "server": "npm run server:dev",
+    "server:dev": "cross-env HOT_MODULES=true webpack-dev-server --port 3000",
     "build:dev": "npm run clean && webpack",
     "build:prod": "cross-env NODE_ENV=production npm run build:dev"
   },

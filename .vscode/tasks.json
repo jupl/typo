@@ -4,7 +4,7 @@
     {
       "label": "Server",
       "type": "npm",
-      "script": "server",
+      "script": "server:dev",
       "isBackground": true,
       "problemMatcher": {
         "owner": "custom",
