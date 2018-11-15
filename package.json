@@ -3,7 +3,7 @@
   "description": "Application description",
   "author": "John Doe <john.doe@gmail.com>",
   "version": "0.0.1",
-  "main": ".dist/bin/app.js",
+  "main": "./.dist/bin/app.js",
   "private": true,
   "build": {
     "files": [
