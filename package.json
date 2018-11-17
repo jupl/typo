@@ -16,7 +16,7 @@
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development HOT_MODULES=true node --inspect -r esm -r ts-node/register/type-check src/bin/app.ts",
     "server:prod": "cross-env NODE_ENV=production node -r esm -r ts-node/register/transpile-only src/bin/app",
-    "build:base": "npm run clean && cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack",
+    "build:base": "npm run clean && cross-env TS_NODE_PROJECT=tsconfig.base.json webpack",
     "build:dev": "cross-env NODE_ENV=development npm run build:base",
     "build:prod": "cross-env NODE_ENV=production npm run build:base"
   },
