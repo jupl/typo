@@ -10,6 +10,5 @@ export default createConfiguration({
   cssLoaders: [{test: /\.css$/, use: ['css-loader']}],
   destination: 'dist/assets',
   devServer: true,
-  log: message => console.log(message),
   source: 'src/assets',
 })
