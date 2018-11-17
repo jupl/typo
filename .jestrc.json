@@ -1,5 +1,10 @@
 {
   "coverageDirectory": "<rootDir>/.coverage",
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "<rootDir>/tsconfig.node.json"
+    }
+  },
   "preset": "ts-jest",
   "setupTestFrameworkScriptFile": "<rootDir>/jest/setup.ts"
 }
