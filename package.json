@@ -14,7 +14,7 @@
     "test:watch": "npm run test -- --watch",
     "server": "npm run server:dev",
     "server:dev": "cross-env HOT_MODULES=true TS_NODE_PROJECT=tsconfig.base.json webpack-dev-server --port 3000",
-    "build:dev": "npm run clean && webpack",
+    "build:dev": "npm run clean && cross-env TS_NODE_PROJECT=tsconfig.base.json webpack",
     "build:prod": "cross-env NODE_ENV=production npm run build:dev"
   },
   "devDependencies": {
