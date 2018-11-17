@@ -1,16 +1,15 @@
 import {addRules, createConfiguration} from 'wcb'
-import {cssLoaders} from './common'
 
 /** Webpack configuration to build client assets */
 export const configuration = addRules(createConfiguration({
-  cssLoaders,
   assets: 'src/assets',
   atlOptions: {
     useBabel: true,
   },
   common: true,
+  cssLoaders: [{test: /\.css$/, use: [{loader: 'css-loader'}]}],
   destination: 'dist/assets',
-  log: message => console.log(`[client] ${message}`),
+  log: 'Client',
   source: 'src/assets',
 }), [
   {test: /\.(gif|jpg|jpeg|png|svg)$/, use: ['file-loader']},

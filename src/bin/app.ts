@@ -1,5 +1,6 @@
 import {Server} from 'hapi'
 import * as appRoutes from '../app/routes'
+import * as inert from '../common/plugin/inert'
 
 const DEFAULT_PORT = 3000
 const envPort = process.env.PORT
@@ -12,8 +13,8 @@ if(isNaN(port)) {
 (async() => { // tslint:disable-line:no-floating-promises
   // Set up client assets based on environment
   const assets = process.env.WEBPACK_BUILD === 'true'
-    ? require('../common/plugin/inert')
-    : require('../webpack/plugin')
+    ? inert
+    : await import('../webpack/plugin')
 
   // Start up server
   const server = new Server({port, routes: {security}})

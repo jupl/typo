@@ -1,3 +1,6 @@
 {
-  "extends": "@jupl/tslint-config"
+  "extends": "@jupl/tslint-config",
+  "rules": {
+    "no-require-imports": true
+  }
 }
