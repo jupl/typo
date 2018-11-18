@@ -16,7 +16,7 @@
       "type": "chrome",
       "request": "attach",
       "name": "Debug Renderer",
-      "port": 9230,
+      "port": 9222,
       "timeout": 30000
     }
   ],

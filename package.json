@@ -24,7 +24,7 @@
     "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch",
     "server": "npm run server:dev",
-    "server:dev": "cross-env HOT_MODULES=true TS_NODE_PROJECT=tsconfig.base.json ELECTRON_DISABLE_SECURITY_WARNINGS=true electron --inspect --remote-debugging-port=9230 -r ts-node/register/type-check src/bin/app.ts",
+    "server:dev": "cross-env HOT_MODULES=true TS_NODE_PROJECT=tsconfig.base.json ELECTRON_DISABLE_SECURITY_WARNINGS=true electron --inspect --remote-debugging-port=9222 -r ts-node/register/type-check src/bin/app.ts",
     "server:prod": "cross-env NODE_ENV=production TS_NODE_PROJECT=tsconfig.base.json ELECTRON_DISABLE_SECURITY_WARNINGS=true electron -r ts-node/register/transpile-only src/bin/app.ts",
     "build:dev": "npm run clean && cross-env TS_NODE_PROJECT=tsconfig.base.json webpack",
     "build:prod": "cross-env NODE_ENV=production npm run build:dev"
