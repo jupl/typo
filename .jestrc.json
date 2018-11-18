@@ -1,5 +1,13 @@
 {
   "coverageDirectory": "<rootDir>/.coverage",
+  "globals": {
+    "ts-jest": {
+      "babelConfig": {
+        "plugins": ["dynamic-import-node"]
+      },
+      "tsConfig": "<rootDir>/tsconfig.node.json"
+    }
+  },
   "preset": "ts-jest",
   "setupTestFrameworkScriptFile": "<rootDir>/jest/setup.ts"
 }

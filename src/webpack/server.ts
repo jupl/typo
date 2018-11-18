@@ -1,29 +1,27 @@
+import {Server} from 'http'
 import {addToEntries} from 'wcb'
-import webpack from 'webpack'
-import Server from 'webpack-dev-server'
+import Webpack from 'webpack'
+import WebpackDevServer from 'webpack-dev-server'
 import {configuration as baseConfiguration} from './config/renderer'
 
 const PORT = 3000
-
-/** Assets server path */
-export const path = `http://localhost:${PORT}`
 
 /**
  * Create assets server
  * @return Hapi server instance
  */
-export function createServer() {
+export async function createServer() {
   const configuration = {
     ...baseConfiguration,
     devServer: {...baseConfiguration.devServer!, port: PORT},
   }
   const config = configuration.devServer.hot === true
     ? addToEntries(configuration, [
-      `webpack-dev-server/client?${path}`,
+      `webpack-dev-server/client?http://localhost:${PORT}`,
       'webpack/hot/only-dev-server',
     ])
     : configuration
-  const server = new Server(webpack(config), {
+  const server = new WebpackDevServer(Webpack(config), {
     hot: configuration.devServer.hot,
     stats: {
       all: false,
@@ -31,6 +29,14 @@ export function createServer() {
       errors: true,
     },
   })
-  server.listen(PORT)
-  return server
+  return new Promise<Server>((resolve, reject) => {
+    const instance = server.listen(PORT, 'localhost', error => {
+      if(error === undefined) {
+        resolve(instance)
+      }
+      else {
+        reject(error)
+      }
+    })
+  })
 }
