@@ -2,7 +2,7 @@ import {addRules, createConfiguration} from 'wcb'
 
 /** Webpack configuration to build client assets */
 export const configuration = addRules(createConfiguration({
-  assets: 'src/assets',
+  assets: true,
   atlOptions: {
     useBabel: true,
   },
