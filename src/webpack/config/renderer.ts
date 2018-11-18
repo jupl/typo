@@ -2,7 +2,7 @@ import {createConfiguration} from 'wcb'
 
 /** Webpack configuration to build renderer process */
 export const configuration = createConfiguration({
-  assets: 'src/assets',
+  assets: true,
   cssLoaders: [{test: /\.css$/, use: ['css-loader']}],
   destination: 'dist/assets',
   devServer: true,
