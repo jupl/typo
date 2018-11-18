@@ -2,7 +2,7 @@ import {createConfiguration} from 'wcb'
 
 // tslint:disable-next-line:no-default-export
 export default createConfiguration({
-  assets: 'src/assets',
+  assets: true,
   atlOptions: {
     useBabel: true,
   },
