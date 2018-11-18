@@ -2,6 +2,9 @@
   "coverageDirectory": "<rootDir>/.coverage",
   "globals": {
     "ts-jest": {
+      "babelConfig": {
+        "plugins": ["dynamic-import-node"]
+      },
       "tsConfig": "<rootDir>/tsconfig.node.json"
     }
   },
