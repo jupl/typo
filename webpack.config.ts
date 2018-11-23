@@ -1,7 +1,7 @@
-import {createConfiguration} from 'wcb'
+import {addToEntries, createConfiguration} from 'wcb'
 
 // tslint:disable-next-line:no-default-export
-export default createConfiguration({
+export default addToEntries(createConfiguration({
   assets: true,
   atlOptions: {
     useBabel: true,
@@ -12,4 +12,6 @@ export default createConfiguration({
   html: true,
   source: 'src/assets',
   split: true,
-})
+}), [
+  'normalize.css',
+])
