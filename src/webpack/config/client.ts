@@ -1,7 +1,7 @@
-import {addRules, createConfiguration} from 'wcb'
+import {addRules, addToEntries, createConfiguration} from 'wcb'
 
 /** Webpack configuration to build client assets */
-export const configuration = addRules(createConfiguration({
+export const configuration = addToEntries(addRules(createConfiguration({
   assets: true,
   atlOptions: {
     useBabel: true,
@@ -15,4 +15,6 @@ export const configuration = addRules(createConfiguration({
   split: true,
 }), [
   {test: /\.(gif|jpg|jpeg|png|svg)$/, use: ['file-loader']},
+]), [
+  'normalize.css',
 ])
