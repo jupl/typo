@@ -40,7 +40,7 @@ typo/
 ├─ jest/               # Code that runs before tests are run
 ├─ src/                # Source code
 │  ├─ assets/          # Static files and entry points to include in builds
-│  │  └─ index.ts      # An application entry point
+│  │  └─ index.ts      # An application entry point (generates an HTML file too)
 │  └─ common/          # Shared domain
 │     └─ declarations/ # TypeScript declarations
 ├─ package.json        # Configuration, tasks, and dependencies
