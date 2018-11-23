@@ -44,7 +44,7 @@ typo/
 │  ├─ app/             # Application domain
 │  │  └─ routes/       # Application routes
 │  ├─ assets/          # Static files and entry points to include in builds
-│  │  └─ app.ts        # An application client-side entry point
+│  │  └─ index.ts      # An application client-side entry point (generates an HTML file too)
 │  ├─ bin/             # Executable entry points
 │  │  └─ app.ts        # App executable entry point
 │  ├─ common/          # Shared domain

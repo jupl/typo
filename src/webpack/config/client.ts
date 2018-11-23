@@ -6,11 +6,13 @@ export const configuration = addRules(createConfiguration({
   atlOptions: {
     useBabel: true,
   },
-  common: true,
   cssLoaders: [{test: /\.css$/, use: [{loader: 'css-loader'}]}],
   destination: 'dist/assets',
+  html: true,
   log: 'Client',
+  publicPath: '/',
   source: 'src/assets',
+  split: true,
 }), [
   {test: /\.(gif|jpg|jpeg|png|svg)$/, use: ['file-loader']},
 ])
