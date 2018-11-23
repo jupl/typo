@@ -1,7 +1,7 @@
-import {createConfiguration} from 'wcb'
+import {addToEntries, createConfiguration} from 'wcb'
 
 /** Webpack configuration to build renderer process */
-export const configuration = createConfiguration({
+export const configuration = addToEntries(createConfiguration({
   assets: true,
   common: true,
   cssLoaders: [{test: /\.css$/, use: ['css-loader']}],
@@ -11,4 +11,6 @@ export const configuration = createConfiguration({
   log: 'Renderer',
   source: 'src/assets',
   target: 'electron-renderer',
-})
+}), [
+  'normalize.css',
+])
