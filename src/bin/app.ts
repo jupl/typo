@@ -2,12 +2,10 @@ import {Server} from 'hapi'
 import * as appRoutes from '../app/routes'
 import * as inert from '../common/plugin/inert'
 
-const DEFAULT_PORT = 3000
-const envPort = process.env.PORT
-let port = parseInt(envPort !== undefined ? envPort : '', 10)
 const security = process.env.NODE_ENV !== 'development'
+let port = parseInt(process.env.PORT !== undefined ? process.env.PORT : '', 10)
 if(isNaN(port)) {
-  port = DEFAULT_PORT
+  port = 3000
 }
 
 (async() => { // tslint:disable-line:no-floating-promises
