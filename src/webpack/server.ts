@@ -31,7 +31,7 @@ export async function createServer() {
   })
   return new Promise<Server>((resolve, reject) => {
     const instance = server.listen(PORT, 'localhost', error => {
-      if(error === undefined) {
+      if(error) {
         resolve(instance)
       }
       else {

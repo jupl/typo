@@ -14,7 +14,7 @@ let windows: Electron.BrowserWindow[] = []
 export function createWindowFactory(url: string, options?: Options) {
   let window: Electron.BrowserWindow | undefined
   return function createWindow() {
-    if(window === undefined) {
+    if(!window) {
       window = new BrowserWindow(options)
       windows = [...windows, window]
       window.loadURL(url)
