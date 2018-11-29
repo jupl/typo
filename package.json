@@ -25,9 +25,9 @@
     "hapi": "^17.8.1"
   },
   "devDependencies": {
-    "@jupl/tslint-config": "^0.6.3",
+    "@jupl/tslint-config": "^0.6.4",
     "@types/hapi": "^17.6.4",
-    "@types/jest": "^23.3.9",
+    "@types/jest": "^23.3.10",
     "@types/node": "^10.12.10",
     "@types/webpack": "^4.4.18",
     "babel-plugin-dynamic-import-node": "^2.2.0",
@@ -43,7 +43,7 @@
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
-    "typescript-tslint-plugin": "^0.1.0",
+    "typescript-tslint-plugin": "^0.1.1",
     "wcb": "^0.13.3",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2"
