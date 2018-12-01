@@ -2,7 +2,7 @@ import {Server} from 'http'
 import {addToEntries} from 'wcb'
 import Webpack from 'webpack'
 import WebpackDevServer from 'webpack-dev-server'
-import {configuration as baseConfiguration} from './config/renderer'
+import {configuration as baseConfiguration} from './webpack.config.renderer'
 
 const PORT = 3000
 

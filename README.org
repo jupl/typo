@@ -45,14 +45,12 @@ typo/
 │  │  └─ app.ts        # App renderer entry point (generates an HTML file too)
 │  ├─ bin/             # Electron main entry points
 │  │  └─ app.ts        # App main entry point
-│  ├─ common/          # Shared domain
-│  │  ├─ declarations/ # TypeScript declarations
-│  │  └─ window.ts     # Helper for creating electron windows
-│  └─ webpack/         # Webpack related code
-│     ├─ config/       # Webpack build configurations
-│     └─ server.ts     # Local development server
+│  └─ common/          # Shared domain
+│     ├─ declarations/ # TypeScript declarations
+│     └─ window.ts     # Helper for creating electron windows
 ├─ package.json        # Configuration, tasks, and dependencies
 ├─ package-lock.json   # Dependency pinning
+├─ server.ts           # Local development server
 ├─ tsconfig.json       # TypeScript configuration
 ├─ tslint.json         # TypeScript linting rules
 └─ webpack.config.ts   # Webpack build configuration
