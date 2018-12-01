@@ -47,12 +47,9 @@ typo/
 │  │  └─ index.ts      # An application client-side entry point (generates an HTML file too)
 │  ├─ bin/             # Executable entry points
 │  │  └─ app.ts        # App executable entry point
-│  ├─ common/          # Shared domain
-│  │  ├─ declarations/ # TypeScript declarations
-│  │  └─ plugin/       # Common plugins
-│  └─ webpack/         # Webpack related code
-│     ├─ config/       # Webpack build configurations
-│     └─ plugin/       # Webpack plugins
+│  └─ common/          # Shared domain
+│     ├─ declarations/ # TypeScript declarations
+│     └─ plugin/       # Common plugins
 ├─ package.json        # Configuration, tasks, and dependencies
 ├─ package-lock.json   # Dependency pinning
 ├─ tsconfig.json       # TypeScript configuration
