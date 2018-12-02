@@ -1,4 +1,4 @@
-import {ServerRegisterPluginObject} from 'hapi'
+import {ServerRegisterPluginObject as Plugin} from 'hapi'
 import inert from 'inert'
 
 /**
@@ -6,9 +6,7 @@ import inert from 'inert'
  * @param path Path to serve assetes
  * @return Hapi plugin
  */
-export const createPlugin = (
-  path: string,
-): ServerRegisterPluginObject<{}> => ({
+export const createPlugin = (path: string): Plugin<{}> => ({
   plugin: {
     name: 'common-insert',
     register: async server => {
