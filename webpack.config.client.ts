@@ -10,7 +10,6 @@ export const configuration = addToEntries(addRules(createConfiguration({
   destination: 'dist/assets',
   html: true,
   log: 'Client',
-  publicPath: '/',
   source: 'src/assets',
   split: true,
 }), [
