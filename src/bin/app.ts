@@ -1,11 +1,11 @@
 import {app} from 'electron'
-import {resolve} from '../common/path'
-import {createWindowFactory} from '../common/window'
+import {resolve} from '~/common/util'
+import {createWindowFactory} from '~/common/window'
 
 (async() => { // tslint:disable-line:no-floating-promises
   let basePath = `file://${resolve('assets')}`
   if(process.env.WEBPACK_BUILD !== 'true') {
-    const {createServer} = await import('../../server')
+    const {createServer} = await import('~/../server')
     const server = await createServer()
     const info = server.address()
     basePath = typeof info === 'string'

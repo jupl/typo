@@ -1,3 +1,6 @@
+// Patch to fix tsconfig-paths plugin
+Object.assign(process.env, {TS_NODE_PROJECT: ''})
+
 import * as main from './webpack.config.main'
 import * as renderer from './webpack.config.renderer'
 

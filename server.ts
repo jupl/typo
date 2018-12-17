@@ -1,10 +1,16 @@
+// Patch to fix tsconfig-paths plugin
+Object.assign(process.env, {TS_NODE_PROJECT: ''})
+
 import {Server} from 'http'
 import {addToEntries} from 'wcb'
 import Webpack from 'webpack'
 import WebpackDevServer from 'webpack-dev-server'
 import {configuration as baseConfiguration} from './webpack.config.renderer'
 
-const PORT = 3000
+let port = Number(process.env.PORT)
+if(isNaN(port)) {
+  port = 3000
+}
 
 /**
  * Create assets server
@@ -13,11 +19,11 @@ const PORT = 3000
 export async function createServer() {
   const configuration = {
     ...baseConfiguration,
-    devServer: {...baseConfiguration.devServer!, port: PORT},
+    devServer: {...baseConfiguration.devServer!, port},
   }
   const config = configuration.devServer.hot === true
     ? addToEntries(configuration, [
-      `webpack-dev-server/client?http://localhost:${PORT}`,
+      `webpack-dev-server/client?http://localhost:${port}`,
       'webpack/hot/only-dev-server',
     ])
     : configuration
@@ -30,7 +36,7 @@ export async function createServer() {
     },
   })
   return new Promise<Server>((resolve, reject) => {
-    const instance = server.listen(PORT, 'localhost', error => {
+    const instance = server.listen(port, 'localhost', error => {
       if(!error) {
         resolve(instance)
       }

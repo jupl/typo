@@ -9,6 +9,7 @@ export const configuration = addToEntries(createConfiguration({
   devServer: true,
   html: true,
   log: 'Renderer',
+  paths: true,
   source: 'src/assets',
   target: 'electron-renderer',
 }), [

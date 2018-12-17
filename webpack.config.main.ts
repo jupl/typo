@@ -4,6 +4,7 @@ import {createConfiguration} from 'wcb'
 export const configuration = createConfiguration({
   destination: 'dist/bin',
   log: 'Main',
+  paths: true,
   source: 'src/bin',
   target: 'electron-main',
 })
