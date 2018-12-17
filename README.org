@@ -40,7 +40,7 @@ typo/
 ├─ jest/               # Code that runs before tests are run
 ├─ src/                # Source code
 │  ├─ app/             # Application domain
-│  │  └─ routes/       # Application routes
+│  │  └─ plugins/      # Application plugins
 │  ├─ bin/             # Executable entry points
 │  │  └─ app.ts        # Application entry point
 │  └─ common/          # Shared domain
