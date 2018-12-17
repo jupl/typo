@@ -42,7 +42,7 @@ typo/
 ├─ jest/               # Code that runs before tests are run
 ├─ src/                # Source code
 │  ├─ app/             # Application domain
-│  │  └─ routes/       # Application routes
+│  │  └─ plugins/      # Application plugins
 │  ├─ assets/          # Static files and entry points to include in builds
 │  │  └─ index.ts      # An application client-side entry point (generates an HTML file too)
 │  ├─ bin/             # Executable entry points

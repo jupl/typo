@@ -1,19 +1,20 @@
 import {Server} from 'hapi'
-import * as AppRoutes from '../app/routes'
-import {resolve} from '../common/path'
-import * as Inert from '../common/plugin/inert'
+import * as AppRoutes from '~/app/plugins/routes'
+import * as Inert from '~/common/plugins/inert'
+import {resolve} from '~/common/util'
 
-const security = process.env.NODE_ENV !== 'development'
-let port = parseInt(process.env.PORT !== undefined ? process.env.PORT : '', 10)
+// Gather configuration data
+const production = process.env.NODE_ENV === 'production'
+let port = Number(process.env.PORT)
 if(isNaN(port)) {
   port = 3000
 }
 
 (async() => { // tslint:disable-line:no-floating-promises
   // Start up server
-  const server = new Server({port, routes: {security}})
+  const server = new Server({port, routes: {security: production}})
   await server.register([
-    AppRoutes,
+    AppRoutes.createPlugin(),
     process.env.WEBPACK_BUILD === 'true'
       ? Inert.createPlugin(resolve('assets'))
       : await webpackPlugin(),
@@ -23,9 +24,9 @@ if(isNaN(port)) {
 })()
 
 async function webpackPlugin() {
-  const [{createPlugin}, {configuration}] = await Promise.all([
-    import('../common/plugin/webpack'),
-    import('../../webpack.config.client'),
+  const [Webpack, {configuration}] = await Promise.all([
+    import('~/common/plugins/webpack'),
+    import('~/../webpack.config.client'),
   ])
-  return createPlugin(configuration)
+  return Webpack.createPlugin(configuration)
 }

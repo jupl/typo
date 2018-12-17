@@ -1,16 +1,14 @@
-import {ServerRegisterPluginObject} from 'hapi'
-import hapiWebpackPlugin from 'hapi-webpack-plugin'
+import {ServerRegisterPluginObject as Plugin} from 'hapi'
+import HapiWebpackPlugin from 'hapi-webpack-plugin'
 import Webpack, {Configuration} from 'webpack'
 
 /**
  * Create Webpack plugin
- * @param configuration Webpack configuration
+ * @param configuration Webpack configuration options
  * @return Hapi plugin
  */
-export const createPlugin = (
-  configuration: Configuration,
-): ServerRegisterPluginObject<{}> => ({
-  ...hapiWebpackPlugin,
+export const createPlugin = (configuration: Configuration): Plugin<{}> => ({
+  ...HapiWebpackPlugin,
   options: {
     assets: {
       logLevel: 'warn',
