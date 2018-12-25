@@ -17,7 +17,7 @@
     "server:dev:combo": "cross-env NODE_ENV=development ESM_DISABLE_CACHE=true HOT_MODULES=true node --inspect -r esm -r dotenv/config -r tsconfig-paths/register -r ts-node/register/type-check src/bin/app.ts",
     "server:dev:api": "cross-env PORT=3001 API_ONLY=true ESM_DISABLE_CACHE=true nodemon src/bin/app.ts",
     "server:dev:ui": "cross-env DEV_SERVER=true HOT_MODULES=true TS_NODE_PROJECT=tsconfig.base.json webpack-dev-server --port 3000",
-    "server:prod": "cross-env NODE_ENV=production ESM_DISABLE_CACHE=true node -r esm -r tsconfig-paths/register -r ts-node/register/transpile-only src/bin/app",
+    "server:prod": "cross-env NODE_ENV=production ESM_DISABLE_CACHE=true node -r esm -r dotenv/config -r tsconfig-paths/register -r ts-node/register/transpile-only src/bin/app",
     "build:base": "npm run clean && cross-env TS_NODE_PROJECT=tsconfig.base.json webpack",
     "build:dev": "cross-env NODE_ENV=development npm run build:base",
     "build:prod": "cross-env NODE_ENV=production npm run build:base"
