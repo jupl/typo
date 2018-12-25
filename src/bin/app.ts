@@ -1,5 +1,5 @@
-import {Server} from 'hapi'
-import * as AppRoutes from '~/app/plugins/routes'
+import {Server, ServerRegisterPluginObject} from 'hapi'
+import * as AppRoutes from '~/app/routes'
 import * as Inert from '~/common/plugins/inert'
 import {resolve} from '~/common/util'
 
@@ -12,13 +12,25 @@ if(isNaN(port)) {
 
 (async() => { // tslint:disable-line:no-floating-promises
   // Start up server
-  const server = new Server({port, routes: {security: production}})
-  await server.register([
+  const server = new Server({
+    port,
+    routes: {
+      files: {relativeTo: resolve('assets')},
+      security: production,
+    },
+  })
+  let plugins: ServerRegisterPluginObject<{}>[] = [
     AppRoutes.createPlugin(),
-    process.env.WEBPACK_BUILD === 'true'
-      ? Inert.createPlugin(resolve('assets'))
-      : await webpackPlugin(),
-  ])
+  ]
+  if(process.env.WEBPACK_BUILD === 'true' || process.env.API_ONLY !== 'true') {
+    plugins = [
+      ...plugins,
+      process.env.WEBPACK_BUILD === 'true'
+        ? Inert.createPlugin()
+        : await webpackPlugin(),
+    ]
+  }
+  await server.register(plugins)
   await server.start()
   console.log('Server running at:', server.info.uri)
 })()

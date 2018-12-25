@@ -93,9 +93,8 @@ Package application using [[https://docs.npmjs.com/cli/pack][npm pack]] so that 
 Make sure that [[https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package][.npmignore]] is up to date when using this task.
 *** =server=
 Alias for =server:hot=.
-*** =server:dev= / =server:hot= / =server:prod=
-Start server in a development or production environment. To override the port change the environment variable =PORT=.The following is also provided with =server:hot=:
-- [[https://webpack.js.org/concepts/hot-module-replacement][Hot reloading]]
+*** =server:dev= / =server:dev:api= / =server:dev:ui= / =server:prod=
+Start server in a development or production environment. To override the port change the environment variable =PORT=.
 *** =build:dev= / =build:prod=
 Build client-side code and include assets into a packaged build in the =dist/= directory. The build for =build:dev= is not minifed and includes source maps, making it ideal for development. The build for =build:prod= is minified (with dead code elimination) and does not include source maps, making it ideal for production.
 *** =test= / =test:watch= / =coverage= / =coverage:watch=

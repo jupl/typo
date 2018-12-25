@@ -5,4 +5,6 @@ import * as client from './webpack.config.client'
 import * as server from './webpack.config.server'
 
 // tslint:disable-next-line:no-default-export
-export default [client.configuration, server.configuration]
+export default process.env.DEV_SERVER === 'true'
+  ? client.configuration
+  : [client.configuration, server.configuration]
