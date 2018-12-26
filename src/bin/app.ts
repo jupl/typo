@@ -1,6 +1,7 @@
 import {Server, ServerRegisterPluginObject} from 'hapi'
 import * as AppRoutes from '~/app/routes'
 import * as Inert from '~/common/plugins/inert'
+import * as Log from '~/common/plugins/log'
 import {resolve} from '~/common/util'
 
 // Gather configuration data
@@ -20,6 +21,7 @@ if(isNaN(port)) {
     },
   })
   let plugins: ServerRegisterPluginObject<{}>[] = [
+    Log.createPlugin(),
     AppRoutes.createPlugin(),
   ]
   if(process.env.WEBPACK_BUILD === 'true' || process.env.API_ONLY !== 'true') {
@@ -32,7 +34,7 @@ if(isNaN(port)) {
   }
   await server.register(plugins)
   await server.start()
-  console.log('Server running at:', server.info.uri)
+  server.log([], `Server running at ${server.info.uri}`)
 })()
 
 async function webpackPlugin() {
