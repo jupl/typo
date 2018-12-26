@@ -1,5 +1,6 @@
 /.coverage/
-/dist/
+/dist/assets/
+/dist/bin/
 .env
 
 # Created by https://www.gitignore.io/api/node
