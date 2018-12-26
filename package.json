@@ -18,11 +18,23 @@
     "build:prod": "cross-env NODE_ENV=production npm run build:base",
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development ESM_DISABLE_CACHE=true nodemon src/bin/app.ts",
-    "server:prod": "cross-env NODE_ENV=production ESM_DISABLE_CACHE=true node -r esm -r tsconfig-paths/register -r ts-node/register/transpile-only src/bin/app"
+    "server:prod": "cross-env NODE_ENV=production ESM_DISABLE_CACHE=true node -r esm -r dotenv/config -r tsconfig-paths/register -r ts-node/register/transpile-only src/bin/app"
   },
+  "bundledDependencies": [
+    "dotenv",
+    "good",
+    "good-console",
+    "good-squeeze",
+    "hapi",
+    "rotating-file-stream"
+  ],
   "dependencies": {
     "dotenv": "^6.2.0",
-    "hapi": "^17.8.1"
+    "good": "^8.1.1",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.1.0",
+    "hapi": "^17.8.1",
+    "rotating-file-stream": "^1.3.9"
   },
   "devDependencies": {
     "@jupl/tslint-config": "^0.6.5",
@@ -44,7 +56,7 @@
     "tsconfig-paths": "^3.7.0",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2",
-    "typescript-tslint-plugin": "^0.1.2",
+    "typescript-tslint-plugin": "^0.2.1",
     "wcb": "^0.15.2",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"

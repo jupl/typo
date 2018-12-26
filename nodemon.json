@@ -1,7 +1,7 @@
 {
   "ext": "ts",
   "execMap": {
-    "ts": "node --inspect -r esm -r tsconfig-paths/register -r ts-node/register/type-check"
+    "ts": "node --inspect -r esm -r dotenv/config -r tsconfig-paths/register -r ts-node/register/type-check"
   },
   "ignore": [
     "**/test.*",
