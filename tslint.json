@@ -1,5 +1,10 @@
 {
   "extends": "@jupl/tslint-config",
+  "linterOptions": {
+    "exclude": [
+      "**/*.json"
+    ]
+  },
   "rules": {
     "no-implicit-dependencies": [true, "dev", ["~"]]
   }
