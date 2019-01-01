@@ -1,8 +1,8 @@
 import {Server, ServerRegisterPluginObject} from 'hapi'
+import {resolve} from 'path'
 import * as AppRoutes from '~/app/routes'
 import * as Inert from '~/common/plugins/inert'
 import * as Log from '~/common/plugins/log'
-import {resolve} from '~/common/util'
 
 // Gather configuration data
 const production = process.env.NODE_ENV === 'production'
@@ -16,7 +16,7 @@ if(isNaN(port)) {
   const server = new Server({
     port,
     routes: {
-      files: {relativeTo: resolve('assets')},
+      files: {relativeTo: resolve(__dirname, '../assets')},
       security: production,
     },
   })
