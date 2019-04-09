@@ -1,6 +1,6 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "@jupl/ts",
   "compilerOptions": {
-    "module": "esnext"
+    "baseUrl": "./src"
   }
 }
