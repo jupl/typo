@@ -1,6 +1,3 @@
 {
-  "extends": "@jupl/ts",
-  "compilerOptions": {
-    "baseUrl": "./src"
-  }
+  "extends": "./node_modules/@jupl/ts/tsconfig.json"
 }
