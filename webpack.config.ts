@@ -1,4 +1,5 @@
 // Patch to fix tsconfig-paths plugin
+// tslint:disable-next-line:no-object-mutation
 Object.assign(process.env, {TS_NODE_PROJECT: ''})
 
 import * as client from './webpack.config.client'

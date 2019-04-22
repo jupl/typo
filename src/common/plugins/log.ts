@@ -1,4 +1,4 @@
-import plugin from 'good'
+import {plugin} from 'good'
 import {ServerRegisterPluginObject as Plugin} from 'hapi'
 
 const FILE_LOG_OPTIONS = {interval: '1d', size: '1M', path: './logs'}

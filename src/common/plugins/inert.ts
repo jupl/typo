@@ -19,8 +19,7 @@ export const createPlugin = (): Plugin<{}> => ({
             onPostHandler: {
               method: ({response}, h) => {
                 // Cache webpack assets as they have unique hash names
-                if(response !== null
-                   && 'header' in response
+                if('header' in response
                    && response.headers['content-type'] !== 'text/html') {
                   response.ttl(31536000000)
                 }
