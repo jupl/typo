@@ -8,9 +8,12 @@ import {createWindowFactory} from '~/common/window'
     const {createServer} = await import('~/../server')
     const server = await createServer()
     const info = server.address()
+    if(info === null) {
+      throw new Error('Unknown server address')
+    }
     basePath = typeof info === 'string'
       ? info
-      : `http://localhost:${info.port}`
+      : `http://${info.address}:${info.port}`
   }
 
   // Set up window when application starts
